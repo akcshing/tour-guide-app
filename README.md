@@ -8,8 +8,8 @@ Run Java.
 
 Dependecies from https://start.spring.io/:
 
-DevTools
-JPA
-Rest Repositories
-Web
-PostgresSQL
+DevTools,
+JPA,
+Rest Repositories,
+Web,
+PostgresSQL,
