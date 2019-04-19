@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Attraction {
 
+    private Long id;
     private String name;
     private String location;
     private String description;
@@ -25,4 +26,6 @@ public class Attraction {
     }
 
     public Attraction(){}
+
+
 }
