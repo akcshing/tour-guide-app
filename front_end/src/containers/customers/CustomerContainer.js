@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import Customer from "../../components/customers/Customer"
 
 class CustomerContainer extends Component {
   constructor(props) {
@@ -11,7 +11,10 @@ class CustomerContainer extends Component {
 
   render(){
     return(
-      <h1>Customer </h1>
+      <div className = "customer">
+      <h1>Customer</h1>
+      <Customer customer = {this.customer} />
+      </div>
     )
   }
 
