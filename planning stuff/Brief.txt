@@ -1,0 +1,20 @@
+Tourist Guide Brief
+
+Design a webpage that allows a tourist guide to plan the best use of time while in Edinburgh.
+
+The Webpage should allow for Tourist Guide to see all attraction, categories into types, any admin fees, time spent going round it and any restrictions.
+
+They should be able to: -
+-	View all attractions
+-	Schedule a day of visits
+-	Update a schedule
+-	Delete things from schedule
+
+Extensions
+-	Filter by type
+-	See busy times
+-	See any restrictions
+-	Pet friendly
+-	Be able to add personal notes
+-	Be able to book directly
+-	Star ratings
