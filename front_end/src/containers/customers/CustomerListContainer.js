@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import CreateLink from "../../components/crud/CreateLink"
+import {Link} from 'react-router-dom';
 
 class CustomerListContainer extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class CustomerListContainer extends Component {
     return(
       <div className="customer-list">
       <h1>Customer List</h1>
-      <CreateLink link="customers" />
+      <Link to="/customers/new">Create Customer</Link>
       </div>
     )
   }
