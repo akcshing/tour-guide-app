@@ -60,4 +60,10 @@ public class BookingTest {
     public void canGetDay(){
         assertEquals(DayType.MONDAY,booking.getDay());
     }
+
+    @Test
+    public void canSetDay(){
+        booking.setDay(DayType.FRIDAY);
+        assertEquals(DayType.FRIDAY,booking.getDay());
+    }
 }
