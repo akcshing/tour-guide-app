@@ -52,4 +52,10 @@ public class AttractionTest {
     public void canGetDuration(){
         assertEquals(1.00,attraction.getDuration(),0.0001);
     }
+
+    @Test
+    public void canSetDuration(){
+        attraction.setDuration(2.00);
+        assertEquals(2.00,attraction.getDuration(),0.001);
+    }
 }
