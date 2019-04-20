@@ -59,5 +59,10 @@ public class CustomerTest {
         assertEquals("4444",customer.getContacNumber());
     }
 
+    @Test
+    public void canGetEmail(){
+        assertEquals("email.com",customer.getEmail());
+    }
+
 
 }
