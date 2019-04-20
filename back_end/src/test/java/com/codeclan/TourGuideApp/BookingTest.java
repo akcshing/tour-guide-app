@@ -1,9 +1,6 @@
 package com.codeclan.TourGuideApp;
 
-import com.codeclan.TourGuideApp.models.Attraction;
-import com.codeclan.TourGuideApp.models.Booking;
-import com.codeclan.TourGuideApp.models.DayType;
-import com.codeclan.TourGuideApp.models.TimeOfDayType;
+import com.codeclan.TourGuideApp.models.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,10 +10,14 @@ public class BookingTest {
 
     private Booking booking;
     private Attraction attraction;
+    private Customer customer1;
+    private Customer customer2;
 
     @Before
     public void before(){
         attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",1.00,10.00,"pichere","historic");
+        customer1 = new Customer("wayne","livingston",30,"555","waynegmail");
+        customer2 = new Customer("tracy","bathgate",24,"884","tracyemail");
         booking = new Booking(TimeOfDayType.AFTERNOON,attraction, DayType.MONDAY);
     }
 
@@ -46,5 +47,12 @@ public class BookingTest {
     @Test
     public void canGetTourGroup(){
         assertEquals(0,booking.getTourGroup().size());
+    }
+
+    @Test
+    public void canAddCustomerToTourGroup(){
+        booking.addCustomer(customer1);
+        booking.addCustomer(customer2);
+        assertEquals(2,booking.getGroupSize());
     }
 }

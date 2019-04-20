@@ -53,6 +53,14 @@ public class Booking {
         this.tourGroup = tourGroup;
     }
 
+    public void addCustomer(Customer customer){
+        this.tourGroup.add(customer);
+    }
+
+    public int getGroupSize(){
+        return getTourGroup().size();
+    }
+
     public DayType getDay() {
         return day;
     }
