@@ -1,12 +1,17 @@
 package com.codeclan.TourGuideApp;
 
 import com.codeclan.TourGuideApp.models.Customer;
+import com.codeclan.TourGuideApp.repositories.CustomerRepository;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.Assert.assertEquals;
 
 public class CustomerTest {
+
+    @Autowired
+    CustomerRepository customerRepository;
 
     private Customer customer;
 
@@ -68,6 +73,11 @@ public class CustomerTest {
     public void canSetEmail(){
         customer.setEmail("newemail.com");
         assertEquals("newemail.com",customer.getEmail());
+    }
+
+    @Test
+    public void canSaveToDataBase(){
+        customerRepository.save(customer);
     }
 
 

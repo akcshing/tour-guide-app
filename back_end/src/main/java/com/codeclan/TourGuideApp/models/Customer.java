@@ -1,12 +1,23 @@
 package com.codeclan.TourGuideApp.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customers")
 public class Customer {
 
+   @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column()
     private String address;
+    @Column()
     private int age;
+    @Column()
     private String contactNumber;
+    @Column()
     private String email;
     //TODO: add private Booking booking - we pass the object, not the id - add this when making table relationships
 
