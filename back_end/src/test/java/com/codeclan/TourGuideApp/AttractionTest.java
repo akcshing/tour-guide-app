@@ -63,4 +63,10 @@ public class AttractionTest {
     public void canGetFee(){
         assertEquals(10.00,attraction.getFee(),0.001);
     }
+
+    @Test
+    public void canSetFee(){
+        attraction.setFee(150.50);
+        assertEquals(150.50,attraction.getFee(),0.001);
+    }
 }
