@@ -20,4 +20,9 @@ public class AttractionTest {
         assertEquals("Edinburgh Castle",attraction.getName());
 
     }
+    @Test
+    public void canSetName(){
+        attraction.setName("hello");
+        assertEquals("hello",attraction.getName());
+    }
 }
