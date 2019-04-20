@@ -50,13 +50,13 @@ public class CustomerTest {
 
     @Test
     public void canGetContactNumber(){
-        assertEquals("1234",customer.getContacNumber());
+        assertEquals("1234",customer.getContactNumber());
     }
 
     @Test
     public void canSetContactNumber(){
-        customer.setContacNumber("4444");
-        assertEquals("4444",customer.getContacNumber());
+        customer.setContactNumber("4444");
+        assertEquals("4444",customer.getContactNumber());
     }
 
     @Test
