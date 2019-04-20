@@ -5,6 +5,8 @@ import com.codeclan.TourGuideApp.models.Attraction;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class AttractionTest {
@@ -92,6 +94,16 @@ public class AttractionTest {
         attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
         attraction.addAccessibility(AccessibilityType.DOGFRIENDLY);
         assertEquals(2,attraction.getAccessibility().size());
+    }
+
+    @Test
+    public void canAddManyAccessibility(){
+        ArrayList<AccessibilityType> access = new ArrayList<>();
+        access.add(AccessibilityType.CHILDFRIENDLY);
+        access.add(AccessibilityType.DOGFRIENDLY);
+        attraction.addMultipleAccessibility(access);
+        assertEquals(2,attraction.getAccessibility().size());
+
     }
 
 
