@@ -35,4 +35,11 @@ public class BookingTest {
     public void canGetAttraction(){
         assertEquals(attraction,booking.getAttraction());
     }
+
+    @Test
+    public void canSetAttraction(){
+        Attraction museum = new Attraction("History Museum","Dalry","History of Dalry",1.00,10.00,"pichere","historic");
+        booking.setAttraction(museum);
+        assertEquals(museum,booking.getAttraction());
+    }
 }
