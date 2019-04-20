@@ -64,5 +64,11 @@ public class CustomerTest {
         assertEquals("email.com",customer.getEmail());
     }
 
+    @Test
+    public void canSetEmail(){
+        customer.setEmail("newemail.com");
+        assertEquals("newemail.com",customer.getEmail());
+    }
+
 
 }
