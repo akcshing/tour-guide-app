@@ -74,4 +74,10 @@ public class AttractionTest {
     public void canGetPic(){
         assertEquals("pichere",attraction.getPic());
     }
+
+    @Test
+    public void canSetPic(){
+        attraction.setPic("my.pic.here");
+        assertEquals("my.pic.here",attraction.getPic());
+    }
 }
