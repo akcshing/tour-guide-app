@@ -37,5 +37,10 @@ public class CustomerTest {
         assertEquals("2 house",customer.getAddress());
     }
 
+    @Test
+    public void canGetAge(){
+        assertEquals(25,customer.getAge());
+    }
+
 
 }
