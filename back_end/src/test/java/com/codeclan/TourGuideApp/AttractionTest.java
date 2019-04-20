@@ -1,12 +1,14 @@
 package com.codeclan.TourGuideApp;
 
 import com.codeclan.TourGuideApp.enums.AccessibilityType;
+import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.Attraction;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static com.codeclan.TourGuideApp.enums.TimeOfDayType.MORNING;
 import static org.junit.Assert.assertEquals;
 
 public class AttractionTest {
@@ -15,7 +17,7 @@ public class AttractionTest {
 
     @Before
     public void before(){
-        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic");
+        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic", MORNING);
     }
 
     @Test
@@ -111,6 +113,17 @@ public class AttractionTest {
     public void canSetCategory(){
         attraction.setCategory("museum");
         assertEquals("museum",attraction.getCategory());
+    }
+
+    @Test
+    public void canGetTimeofDay(){
+        assertEquals(TimeOfDayType.MORNING, attraction.getOpeningTime());
+    }
+
+    @Test
+    public void canSetTimeofDay(){
+        attraction.setOpeningTime(TimeOfDayType.AFTERNOON);
+        assertEquals(TimeOfDayType.AFTERNOON, attraction.getOpeningTime());
     }
 
 

@@ -19,7 +19,7 @@ public class BookingTest {
 
     @Before
     public void before(){
-        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic");
+        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic", TimeOfDayType.AFTERNOON);
         customer1 = new Customer("wayne","livingston",30,"555","waynegmail");
         customer2 = new Customer("tracy","bathgate",24,"884","tracyemail");
         booking = new Booking(TimeOfDayType.AFTERNOON,attraction, DayType.MONDAY);
@@ -43,7 +43,7 @@ public class BookingTest {
 
     @Test
     public void canSetAttraction(){
-        Attraction museum = new Attraction("History Museum","Dalry","History of Dalry",10.00,"pichere","historic");
+        Attraction museum = new Attraction("History Museum","Dalry","History of Dalry",10.00,"pichere","historic",TimeOfDayType.MORNING);
         booking.setAttraction(museum);
         assertEquals(museum,booking.getAttraction());
     }
@@ -79,4 +79,6 @@ public class BookingTest {
         booking.setDay(DayType.FRIDAY);
         assertEquals(DayType.FRIDAY,booking.getDay());
     }
+
+
 }
