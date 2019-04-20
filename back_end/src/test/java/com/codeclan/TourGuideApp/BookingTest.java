@@ -30,4 +30,9 @@ public class BookingTest {
         booking.setTimeOfDay(TimeOfDayType.EVENING);
         assertEquals(TimeOfDayType.EVENING, booking.getTimeOfDay());
     }
+
+    @Test
+    public void canGetAttraction(){
+        assertEquals(attraction,booking.getAttraction());
+    }
 }
