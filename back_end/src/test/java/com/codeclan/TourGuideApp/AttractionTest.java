@@ -36,4 +36,9 @@ public class AttractionTest {
         attraction.setLocation("gretna");
         assertEquals("gretna",attraction.getLocation());
     }
+
+    @Test
+    public void canGetDescription(){
+        assertEquals("Historic fortress", attraction.getDescription());
+    }
 }
