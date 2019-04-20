@@ -113,5 +113,10 @@ public class AttractionTest {
         assertEquals(true,attraction.removeAccessibility(AccessibilityType.CHILDFRIENDLY));
     }
 
+    @Test
+    public void canGetCategory(){
+        assertEquals("historic",attraction.getCategory());
+    }
+
 
 }
