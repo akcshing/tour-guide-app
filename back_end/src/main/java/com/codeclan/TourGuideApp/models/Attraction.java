@@ -21,7 +21,7 @@ public class Attraction {
         this.duration = duration;
         this.fee = fee;
         this.pic = pic;
-        this.accessibility = new ArrayList<AccessibilityType>();
+        this.accessibility = new ArrayList<>();
         this.category = category;
     }
 
