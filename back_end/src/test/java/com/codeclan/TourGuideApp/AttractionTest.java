@@ -83,9 +83,16 @@ public class AttractionTest {
     }
 
     @Test
+    public void canGetAccessibility(){
+        assertEquals(0, attraction.getAccessibility().size());
+    }
+
+    @Test
     public void canAddAccessibility(){
         attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
         attraction.addAccessibility(AccessibilityType.DOGFRIENDLY);
         assertEquals(2,attraction.getAccessibility().size());
     }
+
+
 }
