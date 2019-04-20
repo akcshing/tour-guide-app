@@ -42,4 +42,9 @@ public class BookingTest {
         booking.setAttraction(museum);
         assertEquals(museum,booking.getAttraction());
     }
+
+    @Test
+    public void canGetTourGroup(){
+        assertEquals(0,booking.getTourGroup().size());
+    }
 }
