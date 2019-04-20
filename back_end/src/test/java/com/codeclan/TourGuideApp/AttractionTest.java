@@ -25,4 +25,9 @@ public class AttractionTest {
         attraction.setName("hello");
         assertEquals("hello",attraction.getName());
     }
+
+    @Test
+    public void canGetLocation(){
+        assertEquals("Castlehill",attraction.getLocation());
+    }
 }
