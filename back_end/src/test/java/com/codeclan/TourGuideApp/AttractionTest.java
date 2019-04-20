@@ -69,4 +69,9 @@ public class AttractionTest {
         attraction.setFee(150.50);
         assertEquals(150.50,attraction.getFee(),0.001);
     }
+
+    @Test
+    public void canGetPic(){
+        assertEquals("pichere",attraction.getPic());
+    }
 }
