@@ -42,5 +42,11 @@ public class CustomerTest {
         assertEquals(25,customer.getAge());
     }
 
+    @Test
+    public void canSetAge(){
+        customer.setAge(30);
+        assertEquals(30,customer.getAge());
+    }
+
 
 }
