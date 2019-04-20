@@ -101,9 +101,16 @@ public class AttractionTest {
         ArrayList<AccessibilityType> access = new ArrayList<>();
         access.add(AccessibilityType.CHILDFRIENDLY);
         access.add(AccessibilityType.DOGFRIENDLY);
-        attraction.addMultipleAccessibility(access);
+        attraction.addManyAccessibility(access);
         assertEquals(2,attraction.getAccessibility().size());
 
+    }
+
+    @Test
+    public void canRemoveAccessibility(){
+        attraction.addAccessibility(AccessibilityType.DIETARYREQUIREMENTS);
+        attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
+        assertEquals(true,attraction.removeAccessibility(AccessibilityType.CHILDFRIENDLY));
     }
 
 
