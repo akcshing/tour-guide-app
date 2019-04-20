@@ -55,4 +55,9 @@ public class BookingTest {
         booking.addCustomer(customer2);
         assertEquals(2,booking.getGroupSize());
     }
+
+    @Test
+    public void canGetDay(){
+        assertEquals(DayType.MONDAY,booking.getDay());
+    }
 }
