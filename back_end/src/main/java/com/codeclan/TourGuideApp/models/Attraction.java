@@ -1,6 +1,7 @@
 package com.codeclan.TourGuideApp.models;
 
 import com.codeclan.TourGuideApp.enums.AccessibilityType;
+import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 
 import java.util.ArrayList;
 
@@ -14,8 +15,9 @@ public class Attraction {
     private String pic;
     private ArrayList<AccessibilityType> accessibility;
     private String category;
+    private TimeOfDayType openingTime;
 
-    public Attraction(String name, String location, String description, double fee, String pic, String category){
+    public Attraction(String name, String location, String description, double fee, String pic, String category, TimeOfDayType openingTime){
         this.name = name;
         this.location = location;
         this.description = description;
@@ -23,6 +25,7 @@ public class Attraction {
         this.pic = pic;
         this.accessibility = new ArrayList<>();
         this.category = category;
+        this.openingTime = openingTime;
     }
 
     public Attraction(){}
@@ -97,5 +100,15 @@ public class Attraction {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public
+    TimeOfDayType getOpeningTime() {
+        return openingTime;
+    }
+
+    public
+    void setOpeningTime(TimeOfDayType openingTime) {
+        this.openingTime = openingTime;
     }
 }
