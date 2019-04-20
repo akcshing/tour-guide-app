@@ -15,7 +15,7 @@ public class AttractionTest {
 
     @Before
     public void before(){
-        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",1.00,10.00,"pichere","historic");
+        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic");
     }
 
     @Test
@@ -49,17 +49,6 @@ public class AttractionTest {
     public void canSetDescription(){
         attraction.setDescription("rock pile");
         assertEquals("rock pile",attraction.getDescription());
-    }
-
-    @Test
-    public void canGetDuration(){
-        assertEquals(1.00,attraction.getDuration(),0.0001);
-    }
-
-    @Test
-    public void canSetDuration(){
-        attraction.setDuration(2.00);
-        assertEquals(2.00,attraction.getDuration(),0.001);
     }
 
     @Test

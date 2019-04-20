@@ -8,17 +8,15 @@ public class Attraction {
     private String name;
     private String location;
     private String description;
-    private double duration;
     private double fee;
     private String pic;
     private ArrayList<AccessibilityType> accessibility;
     private String category;
 
-    public Attraction(String name, String location, String description, double duration, double fee, String pic, String category){
+    public Attraction(String name, String location, String description, double fee, String pic, String category){
         this.name = name;
         this.location = location;
         this.description = description;
-        this.duration = duration;
         this.fee = fee;
         this.pic = pic;
         this.accessibility = new ArrayList<>();
@@ -57,14 +55,6 @@ public class Attraction {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public double getDuration() {
-        return duration;
-    }
-
-    public void setDuration(double duration) {
-        this.duration = duration;
     }
 
     public double getFee() {
