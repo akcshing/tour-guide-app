@@ -30,4 +30,10 @@ public class AttractionTest {
     public void canGetLocation(){
         assertEquals("Castlehill",attraction.getLocation());
     }
+
+    @Test
+    public void canSetLocation(){
+        attraction.setLocation("gretna");
+        assertEquals("gretna",attraction.getLocation());
+    }
 }
