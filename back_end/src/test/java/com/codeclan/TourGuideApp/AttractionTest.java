@@ -1,5 +1,6 @@
 package com.codeclan.TourGuideApp;
 
+import com.codeclan.TourGuideApp.models.AccessibilityType;
 import com.codeclan.TourGuideApp.models.Attraction;
 import org.junit.Before;
 import org.junit.Test;
@@ -79,5 +80,12 @@ public class AttractionTest {
     public void canSetPic(){
         attraction.setPic("my.pic.here");
         assertEquals("my.pic.here",attraction.getPic());
+    }
+
+    @Test
+    public void canAddAccessibility(){
+        attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
+        attraction.addAccessibility(AccessibilityType.DOGFRIENDLY);
+        assertEquals(2,attraction.getAccessibility().size());
     }
 }

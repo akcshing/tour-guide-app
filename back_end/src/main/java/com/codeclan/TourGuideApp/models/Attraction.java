@@ -87,8 +87,8 @@ public class Attraction {
         return accessibility;
     }
 
-    public void setAccessibility(ArrayList<AccessibilityType> accessibility) {
-        this.accessibility = accessibility;
+    public void setAccessibility(ArrayList<AccessibilityType> accessibilityList) {
+        this.accessibility = accessibilityList;
     }
 
     public void addAccessibility(AccessibilityType accessibility){
