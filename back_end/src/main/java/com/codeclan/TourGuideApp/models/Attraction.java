@@ -91,6 +91,14 @@ public class Attraction {
         this.accessibility = accessibility;
     }
 
+    public void addAccessibility(AccessibilityType accessibility){
+        this.accessibility.add(accessibility);
+    }
+
+    public boolean removeAccessibility(AccessibilityType accessibility){
+        return this.accessibility.remove(accessibility);
+    }
+
     public String getCategory() {
         return category;
     }

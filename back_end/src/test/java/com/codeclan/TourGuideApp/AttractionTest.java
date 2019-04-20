@@ -4,18 +4,20 @@ import com.codeclan.TourGuideApp.models.Attraction;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class AttractionTest {
 
     private Attraction attraction;
 
     @Before
     public void before(){
-        attraction = new Attraction()
-
+        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",1.00,10.00,"pichere","historic");
     }
 
     @Test
     public void canGetName(){
+        assertEquals("Edinburgh Castle",attraction.getName());
 
     }
 }
