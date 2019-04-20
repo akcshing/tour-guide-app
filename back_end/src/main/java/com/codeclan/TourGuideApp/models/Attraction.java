@@ -3,18 +3,40 @@ package com.codeclan.TourGuideApp.models;
 import com.codeclan.TourGuideApp.enums.AccessibilityType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@Entity
+@Table(name = "attractions")
 public class Attraction {
 
+    @Id
+    @Column(name="id")
+    @GeneratedValue
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private String location;
+
+    @Column
     private String description;
+
+    @Column
     private double fee;
+
+    @Column
     private String pic;
+
+    @Column
     private ArrayList<AccessibilityType> accessibility;
+
+    @Column
     private String category;
+
+    @Column
     private TimeOfDayType openingTime;
 
     public Attraction(String name, String location, String description, double fee, String pic, String category, TimeOfDayType openingTime){

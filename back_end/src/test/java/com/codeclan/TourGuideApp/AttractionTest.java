@@ -3,16 +3,25 @@ package com.codeclan.TourGuideApp;
 import com.codeclan.TourGuideApp.enums.AccessibilityType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.Attraction;
+import com.codeclan.TourGuideApp.repositories.AttractionRepository;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 
 import static com.codeclan.TourGuideApp.enums.TimeOfDayType.MORNING;
 import static org.junit.Assert.assertEquals;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class AttractionTest {
 
+    @Autowired
+    private AttractionRepository attractionRepository;
     private Attraction attraction;
 
     @Before
@@ -124,6 +133,11 @@ public class AttractionTest {
     public void canSetTimeofDay(){
         attraction.setOpeningTime(TimeOfDayType.AFTERNOON);
         assertEquals(TimeOfDayType.AFTERNOON, attraction.getOpeningTime());
+    }
+
+    @Test
+    public void canSaveAttraction(){
+        attractionRepository.save(attraction);
     }
 
 
