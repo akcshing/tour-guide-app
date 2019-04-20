@@ -41,4 +41,10 @@ public class AttractionTest {
     public void canGetDescription(){
         assertEquals("Historic fortress", attraction.getDescription());
     }
+
+    @Test
+    public void canSetDescription(){
+        attraction.setDescription("rock pile");
+        assertEquals("rock pile",attraction.getDescription());
+    }
 }
