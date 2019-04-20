@@ -6,6 +6,8 @@ import com.codeclan.TourGuideApp.models.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class BookingTest {
@@ -49,6 +51,15 @@ public class BookingTest {
     @Test
     public void canGetTourGroup(){
         assertEquals(0,booking.getTourGroup().size());
+    }
+
+    @Test
+    public void canSetTourGroup(){
+        ArrayList<Customer> customers = new ArrayList<>();
+        customers.add(customer1);
+        customers.add(customer2);
+        booking.setTourGroup(customers);
+        assertEquals(2,booking.getGroupSize());
     }
 
     @Test
