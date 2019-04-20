@@ -118,5 +118,11 @@ public class AttractionTest {
         assertEquals("historic",attraction.getCategory());
     }
 
+    @Test
+    public void canSetCategory(){
+        attraction.setCategory("museum");
+        assertEquals("museum",attraction.getCategory());
+    }
+
 
 }
