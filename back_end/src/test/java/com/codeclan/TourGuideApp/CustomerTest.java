@@ -48,5 +48,10 @@ public class CustomerTest {
         assertEquals(30,customer.getAge());
     }
 
+    @Test
+    public void canGetContactNumber(){
+        assertEquals("1234",customer.getContacNumber());
+    }
+
 
 }
