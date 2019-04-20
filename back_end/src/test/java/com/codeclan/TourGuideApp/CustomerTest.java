@@ -26,5 +26,10 @@ public class CustomerTest {
         assertEquals("Jade",customer.getName());
     }
 
+    @Test
+    public void canGetAddress(){
+        assertEquals("1 house",customer.getAddress());
+    }
+
 
 }
