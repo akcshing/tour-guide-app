@@ -31,5 +31,11 @@ public class CustomerTest {
         assertEquals("1 house",customer.getAddress());
     }
 
+    @Test
+    public void canSetAddress(){
+        customer.setAddress("2 house");
+        assertEquals("2 house",customer.getAddress());
+    }
+
 
 }
