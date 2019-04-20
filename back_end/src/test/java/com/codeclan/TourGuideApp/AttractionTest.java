@@ -47,4 +47,9 @@ public class AttractionTest {
         attraction.setDescription("rock pile");
         assertEquals("rock pile",attraction.getDescription());
     }
+
+    @Test
+    public void canGetDuration(){
+        assertEquals(1.00,attraction.getDuration(),0.0001);
+    }
 }
