@@ -20,5 +20,11 @@ public class CustomerTest {
         assertEquals("dave",customer.getName());
     }
 
+    @Test
+    public void canSetName(){
+        customer.setName("Jade");
+        assertEquals("Jade",customer.getName());
+    }
+
 
 }
