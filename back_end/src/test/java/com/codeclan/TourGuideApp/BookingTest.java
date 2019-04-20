@@ -1,5 +1,7 @@
 package com.codeclan.TourGuideApp;
 
+import com.codeclan.TourGuideApp.enums.DayType;
+import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +17,7 @@ public class BookingTest {
 
     @Before
     public void before(){
-        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",1.00,10.00,"pichere","historic");
+        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic");
         customer1 = new Customer("wayne","livingston",30,"555","waynegmail");
         customer2 = new Customer("tracy","bathgate",24,"884","tracyemail");
         booking = new Booking(TimeOfDayType.AFTERNOON,attraction, DayType.MONDAY);
@@ -39,7 +41,7 @@ public class BookingTest {
 
     @Test
     public void canSetAttraction(){
-        Attraction museum = new Attraction("History Museum","Dalry","History of Dalry",1.00,10.00,"pichere","historic");
+        Attraction museum = new Attraction("History Museum","Dalry","History of Dalry",10.00,"pichere","historic");
         booking.setAttraction(museum);
         assertEquals(museum,booking.getAttraction());
     }

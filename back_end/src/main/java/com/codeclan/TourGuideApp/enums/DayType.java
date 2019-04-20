@@ -1,4 +1,4 @@
-package com.codeclan.TourGuideApp.models;
+package com.codeclan.TourGuideApp.enums;
 
 public enum DayType {
     MONDAY,

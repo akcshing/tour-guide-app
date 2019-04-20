@@ -1,5 +1,7 @@
 package com.codeclan.TourGuideApp.models;
 
+import com.codeclan.TourGuideApp.enums.AccessibilityType;
+
 import java.util.ArrayList;
 
 public class Attraction {

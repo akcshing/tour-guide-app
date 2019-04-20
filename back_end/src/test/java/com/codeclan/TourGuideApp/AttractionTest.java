@@ -1,6 +1,6 @@
 package com.codeclan.TourGuideApp;
 
-import com.codeclan.TourGuideApp.models.AccessibilityType;
+import com.codeclan.TourGuideApp.enums.AccessibilityType;
 import com.codeclan.TourGuideApp.models.Attraction;
 import org.junit.Before;
 import org.junit.Test;

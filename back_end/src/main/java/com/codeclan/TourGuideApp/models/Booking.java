@@ -1,6 +1,8 @@
 package com.codeclan.TourGuideApp.models;
 
-import java.awt.print.Book;
+import com.codeclan.TourGuideApp.enums.DayType;
+import com.codeclan.TourGuideApp.enums.TimeOfDayType;
+
 import java.util.ArrayList;
 
 public class Booking {
