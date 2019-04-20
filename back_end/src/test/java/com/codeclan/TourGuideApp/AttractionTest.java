@@ -58,4 +58,9 @@ public class AttractionTest {
         attraction.setDuration(2.00);
         assertEquals(2.00,attraction.getDuration(),0.001);
     }
+
+    @Test
+    public void canGetFee(){
+        assertEquals(10.00,attraction.getFee(),0.001);
+    }
 }
