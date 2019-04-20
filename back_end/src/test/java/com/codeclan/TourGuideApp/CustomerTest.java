@@ -53,5 +53,11 @@ public class CustomerTest {
         assertEquals("1234",customer.getContacNumber());
     }
 
+    @Test
+    public void canSetContactNumber(){
+        customer.setContacNumber("4444");
+        assertEquals("4444",customer.getContacNumber());
+    }
+
 
 }
