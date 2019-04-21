@@ -39,6 +39,11 @@ public class Attraction {
     @Column
     private TimeOfDayType openingTime;
 
+    @OneToOne(mappedBy = "attraction")
+    @JoinColumn(name = "booking_id", nullable = true)
+    private Booking booking;
+
+
     public Attraction(String name, String location, String description, double fee, String pic, String category, TimeOfDayType openingTime){
         this.name = name;
         this.location = location;
@@ -48,9 +53,11 @@ public class Attraction {
         this.accessibility = new ArrayList<>();
         this.category = category;
         this.openingTime = openingTime;
+
     }
 
     public Attraction(){}
+
 
     public Long getId() {
         return id;
