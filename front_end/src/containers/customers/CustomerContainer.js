@@ -21,13 +21,21 @@ class CustomerContainer extends Component {
     })
   }
 
+  handleDelete(id){
+    const request = new Request();
+    const url = '/customers/' + id;
+    request.delete(url).then(() => {
+      window.location = '/customers'
+    })
+  }
+
   render(){
     console.log("rendering...", this.state.customer);
     return(
       <div className = "customer">
       <h1>Customer</h1>
       <Customer customer = {this.state.customer} />
-      <CustomerDetails customer = {this.state.customer} handleDelete = {this.handleDelete} handleEdit={this.handleEdit}/>
+      <CustomerDetails customer = {this.state.customer} handleDelete = {this.handleDelete}/>
       </div>
     )
   }
