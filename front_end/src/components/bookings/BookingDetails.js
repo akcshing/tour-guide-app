@@ -3,21 +3,22 @@ import {Link} from 'react-router-dom';
 
 const Booking = (props) => {
 
-  if (!props) return null;
+  if (!props.booking) return null;
 
-  const onDelte = () =>{
-    prop.handleDelete(props.bookings.id);
+  if(!props.booking) return null;
+  console.log(props.booking);
+  const urlPieces = props.booking._links.self.href.split('/');
+  console.log("urlPieces", urlPieces);
+  const id = urlPieces[urlPieces.length-1]
+
+  const.onDelete = () => {
+    props.handleDelete(id);
   }
 
   const onEdit = () => {
-    props.handleEdit(props.bookings.id)
+    props.handleEdit(id)
   }
 
-  return (
-    <React.Fragment>
-
-    </React.Fragment>
-  )
 }
 
 export default Booking
