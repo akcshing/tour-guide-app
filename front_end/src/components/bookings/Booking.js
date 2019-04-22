@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
 const Booking = ({booking}) => {
 
   if(!booking) return null;
