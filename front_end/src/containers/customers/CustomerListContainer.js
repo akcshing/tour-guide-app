@@ -13,17 +13,19 @@ class CustomerListContainer extends Component {
 
   componentDidMount(){
     let request = new Request()
-    request.get('/api/customers').then((data) => {
-      this.setState({customers: data})
+    request.get('/customers').then((data) => {
+      this.setState({customers: data._embedded.customers})
+      console.log("hi", data);
     })
   }
 
   render(){
+    console.log("rendering...");
     return(
       <div className="customer-list">
       <h1>Customer List</h1>
       <Link to="/customers/new">Create Customer</Link>
-      <CustomerList allCustomers = {this.state.customers}/>
+      <CustomerList customers = {this.state.customers}/>
       </div>
     )
   }

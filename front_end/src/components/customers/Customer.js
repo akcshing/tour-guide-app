@@ -12,7 +12,7 @@ const Customer = ({customer}) => {
         </Link>
       <p>Age: {customer.age}</p>
       <p>Address: {customer.address}</p>
-      <p>Tel: {customer.telNumber}</p>
+      <p>Tel: {customer.contactNumber}</p>
       <p>Email: {customer.email}</p>
 
     </React.Fragment>

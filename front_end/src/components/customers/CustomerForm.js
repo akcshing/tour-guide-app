@@ -9,10 +9,10 @@ const CustomerForm = (props) => {
         "name": event.target.name.value,
         "age": event.target.age.value,
         "address": event.target.address.value,
-        "telNumber": event.target.telNumber.value,
+        "contactNumber": event.target.contactNumber.value,
         "email": event.target.email.value
       }
-      
+
   props.handleCustomerPost(customer)
 
   }
@@ -22,7 +22,7 @@ const CustomerForm = (props) => {
             <input type="text" placeholder="Name" name="name"/>
             <input type="number" placeholder="Age" name="age"/>
             <input type="text" placeholder="Address" name="address"/>
-            <input type="text" placeholder="Tel" name="telNumber"/>
+            <input type="text" placeholder="Tel" name="contactNumber"/>
             <input type="text" placeholder="Email" name="email"/>
             <button type="submit">Save</button>
           </form>

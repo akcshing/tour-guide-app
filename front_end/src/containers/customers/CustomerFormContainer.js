@@ -5,6 +5,7 @@ import Request from "../../helpers/request"
 class CustomerFormContainer extends Component {
   constructor(props) {
     super(props);
+
     this.handleCustomerPost= this.handleCustomerPost.bind(this)
   }
 
@@ -14,7 +15,7 @@ class CustomerFormContainer extends Component {
 
   handleCustomerPost(customer){
     const request = new Request();
-    request.post('/api/customers', customer).then(() => {
+    request.post('/customers', customer).then(() => {
       window.location = '/customers'
     })
   }
