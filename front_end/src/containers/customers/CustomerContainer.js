@@ -17,14 +17,16 @@ class CustomerContainer extends Component {
     const url = '/customers/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({customer: data})
+      console.log(this.state.customer);
     })
   }
 
   render(){
+    console.log("rendering...", this.state.customer);
     return(
       <div className = "customer">
       <h1>Customer</h1>
-      <Customer customer = {this.customer} />
+      <Customer customer = {this.state.customer} />
       <CustomerDetails customer = {this.state.customer} handleDelete = {this.handleDelete} handleEdit={this.handleEdit}/>
       </div>
     )

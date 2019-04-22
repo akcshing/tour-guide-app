@@ -5,9 +5,12 @@ const Customer = ({customer}) => {
 
   if (!customer) return null;
   console.log(customer);
+  const urlPieces = customer._links.self.href.split('/');
+  console.log("urlpieces", urlPieces);
+  const id = urlPieces[urlPieces.length-1]
   return (
     <React.Fragment>
-        <Link to = {"/customers/" + customer.id} className="name">
+        <Link to = {"/customers/" + id} className="name">
           {customer.name}
         </Link>
       <p>Age: {customer.age}</p>
