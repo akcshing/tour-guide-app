@@ -1,5 +1,8 @@
 package com.codeclan.TourGuideApp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +32,14 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "customer")
+    @JsonIgnoreProperties("bookings")
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable( joinColumns = {@JoinColumn (name = "customer_id", nullable = false, updatable = false)},
+    inverseJoinColumns = {@JoinColumn (name = "booking_id", nullable = false, updatable = false)})
     private List<Booking> booking;
+
+
 
 
     public Customer(String name, String address, int age, String contactNumber, String email){

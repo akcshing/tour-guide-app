@@ -2,9 +2,11 @@ package com.codeclan.TourGuideApp.models;
 
 import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "bookings")
@@ -28,9 +30,11 @@ public class Booking {
 //    private ArrayList<Customer> tourGroup;
 
 
-    @ManyToOne
-    @JoinColumn(name="customer_id",nullable = false)
-    private Customer customer;
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(name = "bookings_customers", joinColumns = {@JoinColumn (name="booking_id", nullable = false, updatable = false)},
+    inverseJoinColumns = {@JoinColumn(name = "customer_id", nullable = false, updatable = false)})
+    private List<Customer> customers;
 
     @Enumerated(EnumType.STRING)
     @Column
@@ -41,7 +45,7 @@ public class Booking {
     public Booking(TimeOfDayType timeOfDay, Attraction attraction, Customer customer, DayType day){
         this.timeOfDay = timeOfDay;
         this.attraction = attraction;
-        this.customer = customer;
+        this.customers = new ArrayList<>();
 //        this.tourGroup = new ArrayList<>();
         this.day = day;
 
@@ -82,12 +86,12 @@ public class Booking {
         this.day = day;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public List<Customer> getCustomers() {
+        return customers;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
     }
 }
 
