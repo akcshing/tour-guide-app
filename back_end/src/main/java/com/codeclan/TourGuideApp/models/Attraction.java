@@ -36,6 +36,7 @@ public class Attraction {
     @Column
     private String category;
 
+    @Enumerated()
     @Column
     private TimeOfDayType openingTime;
 
