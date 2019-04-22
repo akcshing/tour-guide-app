@@ -19,7 +19,6 @@ class CustomerListContainer extends Component {
       </div>
     )
   }
-
 }
 
 export default CustomerListContainer;
