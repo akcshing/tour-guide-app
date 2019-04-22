@@ -21,17 +21,24 @@ class BookingContainer extends Component {
     })
   }
 
+  handleDelete(id){
+    const request = new Request();
+    const url = '/bookings' + id;
+    request.delete(url).then(() => {
+      window.location = '/bookings'
+    })
+  }
+
   render(){
     console.log("rendering...", this.state.booking);
     return(
       <div className = "booking">
-      <h1>Customer</h1>
-      <Booking booking = {this.state.customer} />
-      <BookingDetails booking = {this.state.booking} handleDelete = {this.handleDelete} handleEdit={this.handleEdit}/>
+      <h1>Booking</h1>
+      <Customer customer = {this.state.booking}/>
+      <BookingDetails booking = {this.state.booking} handleDelete = {this.handleDelete}/>
       </div>
     )
   }
-
 }
 
 export default BookingContainer;
