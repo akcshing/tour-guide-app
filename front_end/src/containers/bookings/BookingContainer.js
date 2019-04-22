@@ -34,7 +34,7 @@ class BookingContainer extends Component {
     return(
       <div className = "booking">
       <h1>Booking</h1>
-      <Customer customer = {this.state.booking}/>
+      <Booking booking = {this.state.booking}/>
       <BookingDetails booking = {this.state.booking} handleDelete = {this.handleDelete}/>
       </div>
     )
