@@ -21,7 +21,7 @@ public class Attraction {
     @Column
     private String location;
 
-    @Column
+    @Column(length = 1000)
     private String description;
 
     @Column
