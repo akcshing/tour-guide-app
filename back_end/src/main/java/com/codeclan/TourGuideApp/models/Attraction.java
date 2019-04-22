@@ -2,6 +2,7 @@ package com.codeclan.TourGuideApp.models;
 
 import com.codeclan.TourGuideApp.enums.AccessibilityType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class Attraction {
     @Column
     private TimeOfDayType openingTime;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "attraction")
     @JoinColumn(name = "booking_id", nullable = true)
     private Booking booking;

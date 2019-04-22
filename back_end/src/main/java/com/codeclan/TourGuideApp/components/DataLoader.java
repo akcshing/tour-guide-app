@@ -113,6 +113,6 @@ public class DataLoader implements ApplicationRunner {
         bookingRepository.save(booking1);
 
     }
-    
+
 
 }
