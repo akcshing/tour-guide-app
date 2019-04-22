@@ -25,7 +25,10 @@ public class Customer {
     private String email;
 
     @Id
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/customer
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
