@@ -15,7 +15,7 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @Column
     private TimeOfDayType timeOfDay;
 
@@ -32,6 +32,7 @@ public class Booking {
     @JoinColumn(name="customer_id",nullable = false)
     private Customer customer;
 
+    @Enumerated(EnumType.STRING)
     @Column
     private DayType day;
 
