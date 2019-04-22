@@ -29,6 +29,8 @@ class CustomerContainer extends Component {
     })
   }
 
+
+
   render(){
     console.log("rendering...", this.state.customer);
     return(
