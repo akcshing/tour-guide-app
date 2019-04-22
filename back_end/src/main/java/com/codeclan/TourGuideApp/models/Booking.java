@@ -15,7 +15,7 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @Column
     private TimeOfDayType timeOfDay;
 
@@ -23,18 +23,26 @@ public class Booking {
     @JoinColumn(name = "attraction_id")
     private Attraction attraction;
 
-    @Column
-    private ArrayList<Customer> tourGroup;
+//    @ManyToMany()
+//    @Column
+//    private ArrayList<Customer> tourGroup;
 
+
+    @ManyToOne
+    @JoinColumn(name="customer_id",nullable = false)
+    private Customer customer;
+
+    @Enumerated(EnumType.STRING)
     @Column
     private DayType day;
 
 
 
-    public Booking(TimeOfDayType timeOfDay, Attraction attraction, DayType day){
+    public Booking(TimeOfDayType timeOfDay, Attraction attraction, Customer customer, DayType day){
         this.timeOfDay = timeOfDay;
         this.attraction = attraction;
-        this.tourGroup = new ArrayList<>();
+        this.customer = customer;
+//        this.tourGroup = new ArrayList<>();
         this.day = day;
 
     }
@@ -65,21 +73,6 @@ public class Booking {
         this.attraction = attraction;
     }
 
-    public ArrayList<Customer> getTourGroup() {
-        return tourGroup;
-    }
-
-    public void setTourGroup(ArrayList<Customer> tourGroup) {
-        this.tourGroup = tourGroup;
-    }
-
-    public void addCustomer(Customer customer){
-        this.tourGroup.add(customer);
-    }
-
-    public int getGroupSize(){
-        return getTourGroup().size();
-    }
 
     public DayType getDay() {
         return day;
@@ -88,4 +81,27 @@ public class Booking {
     public void setDay(DayType day) {
         this.day = day;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }
+
+//    public ArrayList<Customer> getTourGroup() {
+//        return tourGroup;
+//    }
+//
+//    public void setTourGroup(ArrayList<Customer> tourGroup) {
+//        this.tourGroup = tourGroup;
+//    }
+//
+//    public void addCustomer(Customer customer){
+//        this.tourGroup.add(customer);
+//    }
+//        public int getGroupSize(){
+//        return getTourGroup().size();
+//    }

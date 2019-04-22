@@ -26,7 +26,7 @@ public class AttractionTest {
 
     @Before
     public void before(){
-        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere","historic", MORNING);
+        attraction = new Attraction("Edinburgh Castle","Castlehill","Historic fortress",10.00,"pichere",AccessibilityType.CHILDFRIENDLY,"historic", MORNING);
     }
 
     @Test
@@ -84,34 +84,34 @@ public class AttractionTest {
         assertEquals("my.pic.here",attraction.getPic());
     }
 
-    @Test
-    public void canGetAccessibility(){
-        assertEquals(0, attraction.getAccessibility().size());
-    }
-
-    @Test
-    public void canAddAccessibility(){
-        attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
-        attraction.addAccessibility(AccessibilityType.DOGFRIENDLY);
-        assertEquals(2,attraction.getAccessibility().size());
-    }
-
-    @Test
-    public void canAddManyAccessibility(){
-        ArrayList<AccessibilityType> access = new ArrayList<>();
-        access.add(AccessibilityType.CHILDFRIENDLY);
-        access.add(AccessibilityType.DOGFRIENDLY);
-        attraction.addManyAccessibility(access);
-        assertEquals(2,attraction.getAccessibility().size());
-
-    }
-
-    @Test
-    public void canRemoveAccessibility(){
-        attraction.addAccessibility(AccessibilityType.DIETARYREQUIREMENTS);
-        attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
-        assertEquals(true,attraction.removeAccessibility(AccessibilityType.CHILDFRIENDLY));
-    }
+//    @Test
+//    public void canGetAccessibility(){
+//        assertEquals(0, attraction.getAccessibility().size());
+//    }
+//
+//    @Test
+//    public void canAddAccessibility(){
+//        attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
+//        attraction.addAccessibility(AccessibilityType.DOGFRIENDLY);
+//        assertEquals(2,attraction.getAccessibility().size());
+////    }
+//
+//    @Test
+//    public void canAddManyAccessibility(){
+//        ArrayList<AccessibilityType> access = new ArrayList<>();
+//        access.add(AccessibilityType.CHILDFRIENDLY);
+//        access.add(AccessibilityType.DOGFRIENDLY);
+//        attraction.addManyAccessibility(access);
+//        assertEquals(2,attraction.getAccessibility().size());
+//
+//    }
+//
+//    @Test
+//    public void canRemoveAccessibility(){
+//        attraction.addAccessibility(AccessibilityType.DIETARYREQUIREMENTS);
+//        attraction.addAccessibility(AccessibilityType.CHILDFRIENDLY);
+//        assertEquals(true,attraction.removeAccessibility(AccessibilityType.CHILDFRIENDLY));
+//    }
 
     @Test
     public void canGetCategory(){
