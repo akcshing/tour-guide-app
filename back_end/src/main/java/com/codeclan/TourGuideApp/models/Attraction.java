@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Attraction {
 
     @Id
-    @Column(name="id")
+
     @GeneratedValue
     private Long id;
 
