@@ -12,12 +12,8 @@ import java.util.ArrayList;
 public class Attraction {
 
     @Id
-
-<<<<<<< HEAD
-    @GeneratedValue
-=======
     @GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> feature/customer
+
     private Long id;
 
     @Column
