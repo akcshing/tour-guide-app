@@ -26,7 +26,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
 
     @OneToMany(mappedBy = "customer")
     private List<Booking> booking;
@@ -44,11 +44,11 @@ public class Customer {
     public Customer(){}
 
     public Long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.Id = id;
     }
 
     public String getName() {

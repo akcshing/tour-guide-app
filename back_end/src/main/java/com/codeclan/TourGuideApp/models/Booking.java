@@ -14,7 +14,7 @@ public class Booking {
     @Id
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
 
     @Enumerated(EnumType.STRING)
     @Column
@@ -57,11 +57,11 @@ public class Booking {
     public Booking(TimeOfDayType morning){}
 
     public Long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.Id = id;
     }
 
     public TimeOfDayType getTimeOfDay() {
