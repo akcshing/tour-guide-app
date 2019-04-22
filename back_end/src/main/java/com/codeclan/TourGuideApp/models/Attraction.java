@@ -37,7 +37,7 @@ public class Attraction {
     @Column
     private String category;
 
-    @Enumerated()
+    @Enumerated(EnumType.STRING)
     @Column
     private TimeOfDayType openingTime;
 
