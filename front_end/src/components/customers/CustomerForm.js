@@ -13,7 +13,7 @@ const CustomerForm = (props) => {
         "email": event.target.email.value
       }
 
-  props.handleCustomerPost(customer)
+      props.handleCustomerPost(customer)
 
   }
       return (

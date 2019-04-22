@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Booking {
 
     @Id
-    @Column(name = "id")
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

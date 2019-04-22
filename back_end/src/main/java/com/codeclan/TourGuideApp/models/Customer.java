@@ -25,7 +25,6 @@ public class Customer {
     private String email;
 
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

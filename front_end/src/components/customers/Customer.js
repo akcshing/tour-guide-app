@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Customer = ({customer}) => {
 
   if (!customer) return null;
-
+  console.log(customer);
   return (
     <React.Fragment>
         <Link to = {"/customers/" + customer.id} className="name">
