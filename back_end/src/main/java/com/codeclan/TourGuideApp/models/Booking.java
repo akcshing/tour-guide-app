@@ -2,6 +2,7 @@ package com.codeclan.TourGuideApp.models;
 
 import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class Booking {
     @Column
     private TimeOfDayType timeOfDay;
 
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "attraction_id")
     private Attraction attraction;
@@ -28,6 +30,7 @@ public class Booking {
 //    private ArrayList<Customer> tourGroup;
 
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="customer_id",nullable = false)
     private Customer customer;
@@ -47,7 +50,11 @@ public class Booking {
 
     }
 
-    public Booking(){}
+    public Booking(){
+        
+    }
+
+    public Booking(TimeOfDayType morning){}
 
     public Long getId() {
         return id;
