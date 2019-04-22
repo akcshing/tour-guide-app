@@ -47,7 +47,7 @@ public class Booking {
 
     }
 
-    public Booking(){}
+    public Booking(TimeOfDayType morning){}
 
     public Long getId() {
         return id;

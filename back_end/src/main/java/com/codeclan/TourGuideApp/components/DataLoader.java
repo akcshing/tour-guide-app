@@ -2,6 +2,7 @@ package com.codeclan.TourGuideApp.components;
 
 
 import com.codeclan.TourGuideApp.enums.AccessibilityType;
+import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.Attraction;
 import com.codeclan.TourGuideApp.models.Booking;
@@ -108,5 +109,10 @@ public class DataLoader implements ApplicationRunner {
         Customer sarah = new Customer("Sarah Ray","567 Nathan Road, Hong Kong",21,"01789 0092345", "SunRay@gmail.com");
         customerRepository.save(sarah);
 
+        Booking booking1 = new Booking(TimeOfDayType.MORNING, authursSeat,sarah, DayType.MONDAY );
+        bookingRepository.save(booking1);
+
     }
+    
+
 }
