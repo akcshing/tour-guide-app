@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class Attraction {
 
     @Id
-
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
