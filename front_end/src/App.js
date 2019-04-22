@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from './NavBar.js'
 
-
 import CustomerListContainer from './containers/customers/CustomerListContainer'
 import CustomerContainer from './containers/customers/CustomerContainer';
 import CustomerFormContainer from './containers/customers/CustomerFormContainer';
 import CustomerEditFormContainer from './containers/customers/CustomerEditFormContainer';
 
+import AttractionListContainer from './containers/attractions/AttractionListContainer'
+import AttractionContainer from './containers/attractions/AttractionContainer';
+import AttractionFormContainer from './containers/attractions/AttractionFormContainer';
+import AttractionEditFormContainer from './containers/attractions/AttractionEditFormContainer';
 
 import './App.css';
 
