@@ -30,27 +30,36 @@ public class Attraction {
     @Column
     private String pic;
 
+    @Enumerated(EnumType.STRING)
     @Column
-    private ArrayList<AccessibilityType> accessibility;
+    private AccessibilityType accessibility;
 
     @Column
     private String category;
 
+    @Enumerated()
     @Column
     private TimeOfDayType openingTime;
 
-    public Attraction(String name, String location, String description, double fee, String pic, String category, TimeOfDayType openingTime){
+    @OneToOne(mappedBy = "attraction")
+    @JoinColumn(name = "booking_id", nullable = true)
+    private Booking booking;
+
+
+    public Attraction(String name, String location, String description, double fee, String pic, AccessibilityType accessibility, String category, TimeOfDayType openingTime){
         this.name = name;
         this.location = location;
         this.description = description;
         this.fee = fee;
         this.pic = pic;
-        this.accessibility = new ArrayList<>();
+        this.accessibility = accessibility;
         this.category = category;
         this.openingTime = openingTime;
+
     }
 
     public Attraction(){}
+
 
     public Long getId() {
         return id;
@@ -100,21 +109,6 @@ public class Attraction {
         this.pic = pic;
     }
 
-    public ArrayList<AccessibilityType> getAccessibility() {
-        return accessibility;
-    }
-
-    public void addManyAccessibility(ArrayList<AccessibilityType> accessibilityList) {
-        this.accessibility = accessibilityList;
-    }
-
-    public void addAccessibility(AccessibilityType accessibility){
-        this.accessibility.add(accessibility);
-    }
-
-    public boolean removeAccessibility(AccessibilityType accessibility){
-        return this.accessibility.remove(accessibility);
-    }
 
     public String getCategory() {
         return category;
@@ -134,3 +128,20 @@ public class Attraction {
         this.openingTime = openingTime;
     }
 }
+
+
+//    public ArrayList<AccessibilityType> getAccessibility() {
+//        return accessibility;
+//    }
+//
+//    public void addManyAccessibility(ArrayList<AccessibilityType> accessibilityList) {
+//        this.accessibility = accessibilityList;
+//    }
+
+//    public void addAccessibility(AccessibilityType accessibility){
+//        this.accessibility.add(accessibility);
+//    }
+//
+//    public boolean removeAccessibility(AccessibilityType accessibility){
+//        return this.accessibility.remove(accessibility);
+//    }

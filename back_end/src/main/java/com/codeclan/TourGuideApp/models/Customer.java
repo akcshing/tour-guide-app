@@ -1,6 +1,8 @@
 package com.codeclan.TourGuideApp.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -27,6 +29,9 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToMany(mappedBy = "customer")
+    private List<Booking> booking;
+
 
     public Customer(String name, String address, int age, String contactNumber, String email){
         this.name = name;
@@ -34,6 +39,7 @@ public class Customer {
         this.age = age;
         this.contactNumber = contactNumber;
         this.email = email;
+        this.booking = new ArrayList<>();
     }
 
     public Customer(){}
@@ -85,4 +91,14 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public List<Booking> getBooking() {
+        return booking;
+    }
+
+    public void setBooking(List<Booking> booking) {
+        this.booking = booking;
+    }
+
+
 }
