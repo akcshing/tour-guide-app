@@ -8,7 +8,7 @@ const Customer = ({customer}) => {
   return (
     <React.Fragment>
         <Link to = {"/customers/" + customer.id} className="name">
-          {customer.firstName} {customer.lastName}
+          {customer.name}
         </Link>
       <p>Age: {customer.age}</p>
       <p>Address: {customer.address}</p>
