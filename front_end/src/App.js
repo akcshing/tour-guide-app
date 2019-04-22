@@ -30,6 +30,20 @@ class App extends Component {
               return <CustomerContainer id = {id} />
             }}
             />
+
+            <Route exact path = '/attractions' component={AttractionListContainer}/>
+            <Route exact path = '/attractions/new' component={AttractionFormContainer}/>
+            <Route exact path="/attractions/edit/:id" render = {(props) =>{
+              const id = props.match.params.id;
+              return <AttractionEditFormContainer id = {id} />
+            }}
+            />
+            <Route exact path="/attractions/:id" render = {(props) =>{
+              const id = props.match.params.id;
+              return <AttractionContainer id = {id} />
+            }}
+            />
+
           </Switch>
         </React.Fragment>
       </Router>
