@@ -30,7 +30,13 @@ class App extends Component {
               return <CustomerContainer id = {id} />
             }}
             />
-          </Switch>
+
+
+            <Route path="/bookings/:id" render = {(props) =>{
+              const id = props.atch.params.id;
+              return<BookingListContainer id = {id} />
+            }}
+              </Switch>
         </React.Fragment>
       </Router>
 
