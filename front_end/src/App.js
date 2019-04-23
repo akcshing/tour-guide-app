@@ -7,6 +7,7 @@ import CustomerListContainer from './containers/customers/CustomerListContainer'
 import CustomerContainer from './containers/customers/CustomerContainer';
 import CustomerFormContainer from './containers/customers/CustomerFormContainer';
 import CustomerEditFormContainer from './containers/customers/CustomerEditFormContainer';
+import BookingListContainer from './containers/bookings/BookingListContainer';
 
 
 import './App.css';
@@ -33,9 +34,9 @@ class App extends Component {
 
 
             <Route path="/bookings/:id" render = {(props) =>{
-              const id = props.atch.params.id;
+              const id = props.match.params.id;
               return<BookingListContainer id = {id} />
-            }}
+            }}/>
               </Switch>
         </React.Fragment>
       </Router>

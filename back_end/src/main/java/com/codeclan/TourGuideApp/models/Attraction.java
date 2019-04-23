@@ -12,13 +12,8 @@ import java.util.ArrayList;
 public class Attraction {
 
     @Id
-
-<<<<<<< HEAD
-    @GeneratedValue
-=======
     @GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> feature/customer
-    private Long id;
+    private Long Id;
 
     @Column
     private String name;
@@ -68,11 +63,11 @@ public class Attraction {
 
 
     public Long getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     public String getName() {

@@ -6,14 +6,12 @@ const Booking = ({booking}) => {
 
   if(!booking) return null;
   console.log(booking);
-  const urlPieces = booking._link.self.href.split('/');
-  console.log("urlpieces, urlPieces");
-  const id = urlPieces[urlPieces.length-1]
+  const id = booking.Id
   return(
     <React.Fragment>
       <Link to = {"/bookings/" + id}
       className="id">
-      {booking.id}
+      {booking.Id}
       </Link>
       <p>Day: {booking.day}
       <p>Time Of Day: {booking.timeOfDay}</p>

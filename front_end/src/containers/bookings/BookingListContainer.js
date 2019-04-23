@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
-import CustomerList from "../../components/bookings/BookingList"
+import BookingList from "../../components/bookings/BookingList"
 import Request from "../../helpers/request"
 
 class BookingListContainer extends Component {
