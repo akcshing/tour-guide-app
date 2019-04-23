@@ -23,7 +23,7 @@ class BookingContainer extends Component {
 
   handleDelete(id){
     const request = new Request();
-    const url = '/bookings' + id;
+    const url = '/bookings/' + id;
     request.delete(url).then(() => {
       window.location = '/bookings'
     })

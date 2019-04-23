@@ -8,6 +8,7 @@ const BookingDetails = (props) => {
 
   const onDelete = () => {
     props.handleDelete(props.booking.id);
+    console.log("Help me", props.booking.id);
   }
 
   const onEdit = () => {
