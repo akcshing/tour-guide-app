@@ -6,13 +6,13 @@ const Booking = ({booking}) => {
 
   if(!booking) return null;
   console.log(booking);
-  const id = booking.Id
+  const id = booking.id
   return(
     <React.Fragment>
     <h1>Hello booking</h1>
       <Link to = {"/bookings/" + id}
       className="id">
-      {booking.Id}
+      {booking.id}
       </Link>
       <p>Day: {booking.day}</p>
       <p>Time Of Day: {booking.timeOfDay}</p>

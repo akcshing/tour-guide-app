@@ -11,14 +11,14 @@ const Booking = (props) => {
   console.log("urlPieces", urlPieces);
   const id = urlPieces[urlPieces.length-1]
 
-  const.onDelete = () => {
-    props.handleDelete(id);
-  }
+  // const.onDelete = () => {
+  //   props.handleDelete(id);
+  // }
 
-  const onEdit = () => {
-    props.handleEdit(id)
-  }
+  // const onEdit = () => {
+  //   props.handleEdit(id)
+  // }
 
 }
 
-export default Booking
+export default Booking;

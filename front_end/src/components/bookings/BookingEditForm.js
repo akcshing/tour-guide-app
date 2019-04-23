@@ -1,6 +1,6 @@
-import React, {Components} from 'react';
+import React, {Component} from 'react';
 
-class BookingEditForm extends Components {
+class BookingEditForm extends Component {
 
   constructor(props){
     super(props)
@@ -20,10 +20,10 @@ class BookingEditForm extends Components {
   handleSubmit(event){
     event.preventDefault();
     const booking = {
-      "day": props.booking.day,
-      "time": props.booking.time,
-      "customer": props.booking.customer,
-      "attraction": props.booking.attraction
+      "day": this.props.booking.day,
+      "time": this.props.booking.time,
+      "customer": this.props.booking.customer,
+      "attraction": this.props.booking.attraction
     }
     this.props.handleBookingUpdate(booking)
   }

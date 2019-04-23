@@ -1,19 +1,19 @@
 import React, {Component} from "react";
-import CustomerForm from "../../components/bookings/BookingForm"
+import BookingForm from "../../components/bookings/BookingForm"
 import Request from "../../helpers/request"
 
 class BookingFormContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.handleCustomerPost= this.handleCustomerPost.bind(this)
+    this.handleBookingPost= this.handleBookingPost.bind(this)
   }
 
   componentDidMount() {
 
   }
 
-  handleCustomerPost(customer){
+  handleBookingPost(booking){
     const request = new Request();
     request.post('/bookings', booking).then(() => {
       window.location = '/bookings'
@@ -23,8 +23,8 @@ class BookingFormContainer extends Component {
 
   render(){
     return(
-      <CustomerForm
-      handleCustomerPost={this.handleCustomerPost}
+      <BookingForm
+      handleBookingPost={this.handleBookingPost}
       />
     )
   }

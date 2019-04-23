@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import BookingEditForm from "../../component/booking/BookingEditForm";
+import BookingEditForm from "../../components/bookings/BookingEditForm";
 import Request from "../../helpers/request"
 
 
@@ -8,7 +8,7 @@ class BookingEditFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      customer: null
+      booking: null
     }
     this.handleBookingUpdate = this.handleBookingUpdate.bind(this);
   }
@@ -16,8 +16,8 @@ class BookingEditFormContainer extends Component {
   componentDidMount(){
     const request = new Request();
     request.get("/bookings" + this.props.id).then((booking) => {
-      console.log("data:" , customer);
-      this.setState({customer: customer})
+      console.log("data:" , booking);
+      this.setState({booking: booking})
     });
     console.log(this.state.booking);
   }

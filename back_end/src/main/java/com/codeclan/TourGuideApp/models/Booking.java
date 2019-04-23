@@ -60,8 +60,8 @@ public class Booking {
         return Id;
     }
 
-    public void setId(Long id) {
-        this.Id = id;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     public TimeOfDayType getTimeOfDay() {

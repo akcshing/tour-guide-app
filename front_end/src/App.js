@@ -13,6 +13,12 @@ import AttractionContainer from './containers/attractions/AttractionContainer';
 import AttractionFormContainer from './containers/attractions/AttractionFormContainer';
 import AttractionEditFormContainer from './containers/attractions/AttractionEditFormContainer';
 
+
+import BookingContainer from './containers/bookings/BookingContainer';
+import BookingFormContainer from './containers/bookings/BookingFormContainer';
+import BookingEditFormContainer from './containers/bookings/BookingEditFormContainer';
+
+
 import './App.css';
 
 class App extends Component {
@@ -49,6 +55,11 @@ class App extends Component {
             />
 
             <Route exact path = '/bookings' component={BookingListContainer}/>
+            <Route exact path = '/bookings/:id' render = {(props) =>{
+              const id = props.match.params.id;
+              return <BookingContainer id = {id}/>
+            }}
+            />
 
 
 

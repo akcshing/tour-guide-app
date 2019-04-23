@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 const BookingForm = (props) => {
 
@@ -13,7 +13,7 @@ const BookingForm = (props) => {
     this.props.handleBookingPost(booking)
   }
 
-  return
+  return(
   <div>
   <form onSubmit={handleSubmit}>
   <input type="text" placeholder="day" name="day"/>
@@ -22,7 +22,7 @@ const BookingForm = (props) => {
   <input type="text" placeholder="attraction" name="attraction"/>
   </form>
   </div>
-
+)
 }
 
-export default BookingForm
+export default BookingForm;

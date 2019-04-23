@@ -1,13 +1,13 @@
 import React, {Component} from "react";
-import Customer from "../../components/bookings/Booking"
-import CustomerDetails from "../../components/bookings/BookingDetails";
+import Booking from "../../components/bookings/Booking"
+import BookingDetails from "../../components/bookings/BookingDetails";
 import Request from "../../helpers/request"
 
 class BookingContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      customer: null
+      booking: null
     }
   }
 
