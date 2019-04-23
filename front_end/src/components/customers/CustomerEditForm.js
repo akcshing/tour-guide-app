@@ -16,7 +16,7 @@ class CustomerEditForm extends Component{
 
   componentDidMount(){
 
-      console.log(this.props);
+
   }
 
   handleSubmit(event){

@@ -13,11 +13,11 @@ class CustomerContainer extends Component {
 
   componentDidMount(){
     let request = new Request()
-    console.log("id: ", this.props);
+
     const url = '/customers/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({customer: data})
-      console.log(this.state.customer);
+
     })
   }
 
@@ -32,7 +32,7 @@ class CustomerContainer extends Component {
 
 
   render(){
-    console.log("rendering...", this.state.customer);
+
     return(
       <div className = "customer">
       <h1>Customer</h1>

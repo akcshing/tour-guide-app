@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 const Customer = ({customer}) => {
 
   if (!customer) return null;
-  console.log(customer);
+
   const urlPieces = customer._links.self.href.split('/');
-  console.log("urlpieces", urlPieces);
+
   const id = urlPieces[urlPieces.length-1]
   return (
     <React.Fragment>

@@ -6,9 +6,9 @@ const CustomerDetails = (props) => {
   if (!props.customer) return null;
 
   if (!props.customer) return null;
-  console.log(props.customer);
+
   const urlPieces = props.customer._links.self.href.split('/');
-  console.log("urlpieces", urlPieces);
+
   const id = urlPieces[urlPieces.length-1]
 
   const onDelete = () => {

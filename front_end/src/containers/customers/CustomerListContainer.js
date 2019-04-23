@@ -15,12 +15,12 @@ class CustomerListContainer extends Component {
     let request = new Request()
     request.get('/customers').then((data) => {
       this.setState({customers: data._embedded.customers})
-      console.log("hi", data);
+
     })
   }
 
   render(){
-    console.log("rendering...");
+
     return(
       <div className="customer-list">
       <h1>Customer List</h1>

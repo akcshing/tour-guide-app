@@ -3,7 +3,7 @@ import Customer from "./Customer";
 
 const CustomerList = ({customers}) => {
   if (!customers) return null;
-  console.log("hello", customers);
+
   const mappedCustomers = customers.map((customer, index) => {
     return <Customer key={index} customer={customer}/>
   })

@@ -5,7 +5,7 @@ import Request from "../../helpers/request"
 class CustomerEditFormContainer extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+
     this.state = {
       customer: null
     }
@@ -15,10 +15,10 @@ class CustomerEditFormContainer extends Component {
   componentDidMount(){
     const request = new Request();
     request.get("/customers/" + this.props.id ).then((customer) => {
-      console.log("data:",customer);
+
       this.setState({customer: customer})
     });
-    console.log(this.state.customer);
+
   }
 
   handleCustomerUpdate(customer){
@@ -29,7 +29,7 @@ class CustomerEditFormContainer extends Component {
   }
 
   render(){
-    console.log("rendering...");
+
     if (!this.state.customer) return null;
 
     return(

@@ -13,11 +13,9 @@ class BookingContainer extends Component {
 
   componentDidMount(){
     let request = new Request()
-    console.log("id: ", this.props);
     const url = '/bookings/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({booking: data})
-      console.log("request done", this.state.booking);
     })
   }
 
