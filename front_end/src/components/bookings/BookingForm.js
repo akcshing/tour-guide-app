@@ -36,13 +36,77 @@ const BookingForm = (props) => {
   return(
     <div>
     <form onSubmit={handleSubmit}>
-    <select onChange= {handleCustomerSelect} name="customer-options">
-    {allCustomers}
-    </select>
-    <select onChange= {handleAttractionSelect} name="attraction-options">
-    {allAttractions}
-    </select>
-    <button type="submit">submit</button>
+
+      <select onChange= {handleCustomerSelect} name="customer-options">
+      {allCustomers}
+      </select>
+
+      <select onChange= {handleAttractionSelect} name="attraction-options">
+      {allAttractions}
+      </select>
+
+      <div className="time">
+        <div>
+        <input type = "radio" id="morning" name="time" value="MORNING"
+        checked/>
+        <label for="morning">Morning</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="afternoon" name="time" value="AFTERNOON"/>
+        <label for="afternoon">Afternoon</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="evening" name="time" value="EVENING"/>
+        <label for="evening">Evening</label>
+        </div>
+      </div>
+
+      <div className="day">
+        <div>
+        <input type = "radio" id="monday" name="day" value="MONDAY"
+        checked/>
+        <label for="monday">Monday</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="tuesday" name="day" value="TUESDAY"/>
+        <label for="tuesday">Tuesday</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="wednesday" name="day" value="WEDNESDAY"/>
+        <label for="wednesday">Wednesday</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="thursday" name="day" value="THURSDAY"/>
+        <label for="thursday">Thursday</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="friday" name="day" value="FRIDAY"/>
+        <label for="friday">Friday</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="saturday" name="day" value="SATURDAY"/>
+        <label for="saturday">Saturday</label>
+        </div>
+
+        <div>
+        <input type = "radio" id="sunday" name="day" value="SUNDAY"/>
+        <label for="sunday">Sunday</label>
+        </div>
+      </div>
+
+
+
+
+
+
+      <button type="submit">submit</button>
     </form>
     </div>
   )
