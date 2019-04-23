@@ -15,7 +15,7 @@ const NavBar = (props) => {
           <Link to="/bookings/new">Create Booking</Link>
         </li>
         <li className="navLink">
-          <Link to="/attractions">Attrations</Link>
+          <Link to="/attractions">Attractions</Link>
         </li>
         <li className="navLink">
           <Link to="/customers" >Customers</Link>
