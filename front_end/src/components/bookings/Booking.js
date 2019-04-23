@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom';
 const Booking = ({booking, customer, attraction}) => {
 
   if(!booking) return null;
-  if(!customer) return null;
+  if(!customer) customer = {name: ""};
+  if(!attraction) attraction = {name: ""};
 
 
   console.log(booking);
@@ -20,8 +21,8 @@ const Booking = ({booking, customer, attraction}) => {
       </Link>
       <p>Day: {booking.day}</p>
       <p>Time Of Day: {booking.timeOfDay}</p>
-      <p>{customer.name}</p>
-      <p>{attraction.name}</p>
+      <p>Customer: {customer.name}</p>
+      <p>Attraction: {attraction.name}</p>
       </React.Fragment>
   )
 

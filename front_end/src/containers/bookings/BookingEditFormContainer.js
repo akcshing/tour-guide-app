@@ -34,7 +34,7 @@ class BookingEditFormContainer extends Component {
   handleBookingUpdate(booking){
     const request = new Request();
     request.patch("/bookings/" + this.props.id, booking).then(() => {
-      window.location = "/booking/" + this.props.id
+      window.location = "/bookings/" + this.props.id
     })
   }
 

@@ -14,20 +14,31 @@ class BookingContainer extends Component {
   }
 
   componentDidMount(){
+    if (this.props.id) this.fetchAllData();
+    else if (this.props.booking) {
+      this.setState({booking: this.props.booking});
+      this.fetchAdditionalData(this.props.booking.id);
+    }
+  }
 
+  fetchAllData(){
     let request = new Request()
     const url = '/bookings/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({booking: data})
     })
-    .then(()=>{
-      request.get("/bookings/" + this.props.id + "/customer").then((data) => {
-        this.setState({customer: data})
-        console.log("request", data);
-      })
+    this.fetchAdditionalData(this.props.id)
+  }
+
+  fetchAdditionalData(id){
+    let request = new Request();
+    request.get("/bookings/" + id + "/customer")
+    .then((data) => {
+      this.setState({customer: data})
     })
     .then(()=>{
-      request.get("/bookings/" + this.props.id + "/attraction").then((data) => {
+      request.get("/bookings/" + id + "/attraction")
+      .then((data) => {
         this.setState({attraction: data})
       })
     })
