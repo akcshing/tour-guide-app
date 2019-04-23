@@ -8,9 +8,6 @@ class BookingFormContainer extends Component {
     this.state = {
       attractions: null,
       customers: null,
-      //selectedCustomer
-      //selectedAttraction
-      //booking
     }
 
     this.handleBookingPost= this.handleBookingPost.bind(this)
@@ -30,6 +27,7 @@ class BookingFormContainer extends Component {
   }
 
   handleBookingPost(booking){
+    console.log("container handlebooking", booking);
     const request = new Request();
     request.post('/bookings', booking).then(() => {
       window.location = '/bookings'

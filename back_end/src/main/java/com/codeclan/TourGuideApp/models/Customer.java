@@ -29,7 +29,7 @@ public class Customer {
     private Long Id;
 
     @OneToMany(mappedBy = "customer")
-    private List<Booking> booking;
+    private List<Booking> bookings;
 
 
     public Customer(String name, String address, int age, String contactNumber, String email){
@@ -38,7 +38,7 @@ public class Customer {
         this.age = age;
         this.contactNumber = contactNumber;
         this.email = email;
-        this.booking = new ArrayList<>();
+        this.bookings = new ArrayList<>();
     }
 
     public Customer(){}
@@ -91,12 +91,12 @@ public class Customer {
         this.email = email;
     }
 
-    public List<Booking> getBooking() {
-        return booking;
+    public List<Booking> getBookings() {
+        return bookings;
     }
 
-    public void setBooking(List<Booking> booking) {
-        this.booking = booking;
+    public void setBookings(List<Booking> booking) {
+        this.bookings = booking;
     }
 
 

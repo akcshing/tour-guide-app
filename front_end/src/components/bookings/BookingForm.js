@@ -5,8 +5,6 @@ const BookingForm = (props) => {
   if (!props.customers) return null;
   if (!props.attractions) return null;
 
-  console.log("i am form props", props);
-
   const allCustomers = props.customers.map((customer, index) => {
     return <option key={index} value={index}>{customer.name}</option>
   })
@@ -16,39 +14,36 @@ const BookingForm = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
+    console.log("event");
+
+
+
+
     const booking = {
-      "day": props.booking.day,
-      "time": props.booking.time,
-      "customer": props.booking.customer,
-      "attraction": props.booking.attraction
+      "day": event.target.day.value,
+      "time": event.target.time.value,
+      "customer": "http://localhost:8080/customers/" + event.target.customers.value,
+      "attraction": "http://localhost:8080/attractions/" + event.target.attractions.value
     }
-    this.props.handleBookingPost(booking)
-  }
-
-  function handleCustomerSelect(event){
-    props.handleCustomerSelect(event.target.value);
-  }
-
-  function handleAttractionSelect(event){
-    props.handleAttractionSelect(event.target.value);
+    props.handleBookingPost(booking)
+    console.log("confirm booking",booking);
   }
 
   return(
     <div>
     <form onSubmit={handleSubmit}>
 
-      <select onChange= {handleCustomerSelect} name="customer-options">
+      <select name="customers">
       {allCustomers}
       </select>
 
-      <select onChange= {handleAttractionSelect} name="attraction-options">
+      <select name="attractions">
       {allAttractions}
       </select>
 
       <div className="time">
         <div>
-        <input type = "radio" id="morning" name="time" value="MORNING"
-        checked/>
+        <input type = "radio" id="morning" name="time" value="MORNING"/>
         <label for="morning">Morning</label>
         </div>
 
@@ -65,8 +60,7 @@ const BookingForm = (props) => {
 
       <div className="day">
         <div>
-        <input type = "radio" id="monday" name="day" value="MONDAY"
-        checked/>
+        <input type = "radio" id="monday" name="day" value="MONDAY"/>
         <label for="monday">Monday</label>
         </div>
 
@@ -100,12 +94,6 @@ const BookingForm = (props) => {
         <label for="sunday">Sunday</label>
         </div>
       </div>
-
-
-
-
-
-
       <button type="submit">submit</button>
     </form>
     </div>
