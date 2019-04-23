@@ -62,6 +62,10 @@ class App extends Component {
             />
 
 
+            <Route exact path = '/bookings/new' component={BookingFormContainer}/>
+
+
+
 
           </Switch>
         </React.Fragment>

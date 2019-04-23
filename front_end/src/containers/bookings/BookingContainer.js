@@ -17,7 +17,7 @@ class BookingContainer extends Component {
     const url = '/bookings/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({booking: data})
-      console.log(this.state.booking);
+      console.log("request done", this.state.booking);
     })
   }
 
@@ -30,7 +30,8 @@ class BookingContainer extends Component {
   }
 
   render(){
-    console.log("rendering...", this.state.booking);
+    console.log("rendering...booking container", this.state.booking);
+    if (!this.state.booking) return null;
     return(
       <div className = "booking">
       <h1>Booking</h1>

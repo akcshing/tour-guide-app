@@ -1,24 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Booking = (props) => {
+const BookingDetails = (props) => {
 
   if (!props.booking) return null;
 
-  if(!props.booking) return null;
-  console.log(props.booking);
-  const urlPieces = props.booking._links.self.href.split('/');
-  console.log("urlPieces", urlPieces);
-  const id = urlPieces[urlPieces.length-1]
 
-  // const.onDelete = () => {
-  //   props.handleDelete(id);
-  // }
+  const onDelete = () => {
+    props.handleDelete(props.booking.id);
+  }
 
-  // const onEdit = () => {
-  //   props.handleEdit(id)
-  // }
-
+  const onEdit = () => {
+    props.handleEdit(props.booking.id)
+  }
+return (
+  <div className = "booking-details">
+  <Link to = {"/bookings/edit/" + props.booking.id} className="name">
+    Edit
+  </Link>
+  <button onClick = {onDelete}>Delete</button>
+  </div>
+)
 }
 
-export default Booking;
+export default BookingDetails;
