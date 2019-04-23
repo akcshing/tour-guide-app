@@ -7,15 +7,29 @@ class BookingContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      booking: null
+      booking: null,
+      attraction: null,
+      customer: null
     }
   }
 
   componentDidMount(){
+
     let request = new Request()
     const url = '/bookings/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({booking: data})
+    })
+    .then(()=>{
+      request.get("/bookings/" + this.props.id + "/customer").then((data) => {
+        this.setState({customer: data})
+        console.log("request", data);
+      })
+    })
+    .then(()=>{
+      request.get("/bookings/" + this.props.id + "/attraction").then((data) => {
+        this.setState({attraction: data})
+      })
     })
   }
 
@@ -28,12 +42,16 @@ class BookingContainer extends Component {
   }
 
   render(){
-    console.log("rendering...booking container", this.state.booking);
+    console.log("rendering...booking container", this.state.customer);
     if (!this.state.booking) return null;
     return(
       <div className = "booking">
       <h1>Booking</h1>
-      <Booking booking = {this.state.booking}/>
+      <Booking
+      booking = {this.state.booking}
+      customer = {this.state.customer}
+      attraction = {this.state.attraction}
+      />
       <BookingDetails booking = {this.state.booking} handleDelete = {this.handleDelete}/>
       </div>
     )

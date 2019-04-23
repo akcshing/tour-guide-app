@@ -8,7 +8,9 @@ class BookingEditFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      booking: null
+      booking: null,
+      customers: null,
+      attractions: null
     }
     this.handleBookingUpdate = this.handleBookingUpdate.bind(this);
   }
@@ -18,8 +20,15 @@ class BookingEditFormContainer extends Component {
     request.get("/bookings" + this.props.id).then((booking) => {
       console.log("data:" , booking);
       this.setState({booking: booking})
+    }).then(() => {
+      request.get("/customers").then((customers) => {
+        this.setState({customers: customers._embedded.customers})
+      })
+    }).then(() => {
+      request.get("/attractions").then((attractions) => {
+        this.setState({attractions: attractions._embedded.attractions})
+      })
     });
-    console.log(this.state.booking);
   }
 
   handleBookingUpdate(booking){
@@ -38,7 +47,10 @@ class BookingEditFormContainer extends Component {
       <h1>Edit Booking Info</h1>
       <BookingEditForm
       booking={this.state.booking}
-      handleBookingUpdate = {this.handleBookingUpdate}/>
+      handleBookingUpdate = {this.handleBookingUpdate}
+      allCustomers = {this.state.customers}
+      allAttractions = {this.state.attractions}
+      />
       </div>
     )
   }

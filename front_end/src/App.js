@@ -57,12 +57,18 @@ class App extends Component {
             <Route exact path = '/bookings/new' component={BookingFormContainer}/>
 
             <Route exact path = '/bookings' component={BookingListContainer}/>
+
             <Route exact path = '/bookings/:id' render = {(props) =>{
               const id = props.match.params.id;
               return <BookingContainer id = {id}/>
             }}
             />
 
+            <Route exact path="/bookings/edit/:id" render = {(props) =>{
+              const id = props.match.params.id;
+              return <BookingEditFormContainer id = {id} />
+            }}
+            />
 
           </Switch>
         </React.Fragment>
