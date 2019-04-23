@@ -5,7 +5,7 @@ class BookingEditForm extends Component {
     super(props)
     this.state = {
       day: props.booking.day,
-      time: props.booking.time,
+      timeOfDay: props.booking.timeOfDay,
       customer: props.booking.customer,
       attraction: props.booking.attraction
     }
@@ -17,10 +17,11 @@ class BookingEditForm extends Component {
   }
 
   handleSubmit(event){
+
     event.preventDefault();
     const booking = {
-      "day": this.state.day,
-      "timeOfDay": this.state.time,
+      "day": event.target.day.value,
+      "timeOfDay": event.target.timeOfDay.value,
       "customer": this.state.customer,
       "attraction": this.state.attraction
     }
@@ -54,19 +55,19 @@ class BookingEditForm extends Component {
         {allAttractions}
         </select>
 
-        <div className="time">
+        <div className="timeOfDayRadio">
           <div>
-          <input type = "radio" id="morning" name="time" value="MORNING"/>
+          <input type = "radio" id="timeOfDay" name="timeOfDay" value="MORNING"/>
           <label for="morning">Morning</label>
           </div>
 
           <div>
-          <input type = "radio" id="afternoon" name="time" value="AFTERNOON"/>
+          <input  type = "radio" id="timeOfDay" name="timeOfDay" value="AFTERNOON"/>
           <label for="afternoon">Afternoon</label>
           </div>
 
           <div>
-          <input type = "radio" id="evening" name="time" value="EVENING"/>
+          <input type = "radio" id="evening" name="timeOfDay" value="EVENING"/>
           <label for="evening">Evening</label>
           </div>
         </div>
