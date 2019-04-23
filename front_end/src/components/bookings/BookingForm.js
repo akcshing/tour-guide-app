@@ -21,7 +21,7 @@ const BookingForm = (props) => {
 
     const booking = {
       "day": event.target.day.value,
-      "time": event.target.time.value,
+      "timeOfDay": event.target.time.value,
       "customer": "http://localhost:8080/customers/" + event.target.customers.value,
       "attraction": "http://localhost:8080/attractions/" + event.target.attractions.value
     }

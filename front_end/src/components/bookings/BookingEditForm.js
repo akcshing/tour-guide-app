@@ -20,7 +20,7 @@ class BookingEditForm extends Component {
     event.preventDefault();
     const booking = {
       "day": this.state.day,
-      "time": this.state.time,
+      "timeOfDay": this.state.time,
       "customer": this.state.customer,
       "attraction": this.state.attraction
     }
