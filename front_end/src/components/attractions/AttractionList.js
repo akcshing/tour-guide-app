@@ -14,4 +14,5 @@ const AttractionList = ({attractions}) => {
   )
 }
 
+
 export default AttractionList;

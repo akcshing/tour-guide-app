@@ -15,17 +15,17 @@ class AttractionListContainer extends Component {
     let request = new Request()
     request.get('/attractions').then((data) => {
       this.setState({attractions: data._embedded.attractions})
-      console.log("hi", data);
+
     })
   }
 
   render(){
-    console.log("rendering...");
+
     return(
       <div className="attraction-list">
       <h1>Attraction List</h1>
       <Link to="/attractions/new">Create Attraction</Link>
-      <AttractionList attractions = {this.state.attractions}/>
+            <AttractionList attractions = {this.state.attractions}/>
       </div>
     )
   }

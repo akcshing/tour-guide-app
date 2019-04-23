@@ -3,14 +3,18 @@ import {Link} from 'react-router-dom';
 
 const AttractionDetail = (props) => {
 
-  if (!props) return null;
+  if (!props.attraction) return null;
+
+  const urlPieces = props.attraction._links.self.href.split('/');
+
+  const id = urlPieces[urlPieces.length-1]
 
   const onDelete = () => {
-    props.handleDelete(props.attraction.id);
+    props.handleDelete(id);
   }
 
   const onEdit = () => {
-    props.handleEdit(props.attraction.id)
+    props.handleEdit(id)
   }
 
 
@@ -18,7 +22,10 @@ const AttractionDetail = (props) => {
 
   return (
     <React.Fragment>
-
+    <Link to = {"/attractions/edit/" + id} className="name">
+      Edit
+    </Link>
+    <button onClick = {onDelete}>Delete</button>
 
     </React.Fragment>
   )

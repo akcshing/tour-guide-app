@@ -13,16 +13,24 @@ class AttractionContainer extends Component {
 
   componentDidMount(){
     let request = new Request()
-    console.log("id: ", this.props);
+
     const url = '/attractions/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({attraction: data})
-      console.log(this.state.attraction);
+
+    })
+  }
+
+  handleDelete(id){
+    const request = new Request();
+    const url = '/attractions/' + id;
+    request.delete(url).then(() => {
+      window.location = '/attractions'
     })
   }
 
   render(){
-    console.log("rendering...", this.state.attraction);
+
     return(
       <div className = "attraction">
       <h1>Attraction</h1>

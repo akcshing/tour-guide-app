@@ -12,7 +12,7 @@ const AttractionForm = (props) => {
         "description": event.target.description.value,
         "fee": event.target.fee.value,
         "accessibility": event.target.accessibility.value,
-        "opening_time": event.target.opening_time.value
+        "opening_time": event.target.openingTime.value
 
       }
 
@@ -28,7 +28,7 @@ const AttractionForm = (props) => {
             <input type="text" placeholder="Description" name="description"/>
             <input type="number" placeholder="Fee" name="fee"/>
             <input type="text" placeholder="Accessibility" name="accessibility"/>
-            <input type="text" placeholder="Opening_Time" name="opening_time"/>
+            <input type="text" placeholder="OpeningTime" name="openingTime"/>
             <button type="submit">Save</button>
           </form>
         </div>
