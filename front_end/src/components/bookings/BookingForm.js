@@ -16,10 +16,7 @@ const BookingForm = (props) => {
   return(
   <div>
   <form onSubmit={handleSubmit}>
-  <input type="text" placeholder="day" name="day"/>
-  <input type="text" placeholder="time" name="time"/>
-  <input type="text" placeholder="customer" name="customer"/>
-  <input type="text" placeholder="attraction" name="attraction"/>
+    <h1>I AM FORM</h1>
   </form>
   </div>
 )
