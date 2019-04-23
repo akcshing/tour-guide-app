@@ -48,6 +48,10 @@ class App extends Component {
             }}
             />
 
+            <Route exact path = '/bookings' component={BookingListContainer}/>
+
+
+
           </Switch>
         </React.Fragment>
       </Router>

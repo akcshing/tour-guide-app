@@ -7,7 +7,7 @@ class BookingListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      customers: null
+      bookings: null
     }
   }
 
@@ -15,7 +15,7 @@ class BookingListContainer extends Component {
     let request = new Request()
     request.get('/bookings').then((data) => {
       this.setState({bookings: data._embedded.bookings})
-      console.log("hi", data);
+      console.log("hi booking", data);
     })
   }
 

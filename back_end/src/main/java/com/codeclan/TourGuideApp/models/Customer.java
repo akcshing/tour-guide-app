@@ -47,13 +47,8 @@ public class Customer {
         return Id;
     }
 
-<<<<<<< HEAD
     public void setId(Long Id) {
         this.Id = Id;
-=======
-    public void setId(Long id) {
-        this.Id = id;
->>>>>>> develop
     }
 
     public String getName() {

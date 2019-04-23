@@ -13,10 +13,6 @@ public class Attraction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
     private Long Id;
 
     @Column
@@ -70,13 +66,8 @@ public class Attraction {
         return Id;
     }
 
-<<<<<<< HEAD
     public void setId(Long Id) {
         this.Id = Id;
-=======
-    public void setId(Long id) {
-        this.Id = id;
->>>>>>> develop
     }
 
     public String getName() {
