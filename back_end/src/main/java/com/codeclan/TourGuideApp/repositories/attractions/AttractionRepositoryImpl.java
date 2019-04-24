@@ -18,12 +18,12 @@ public class AttractionRepositoryImpl {
     EntityManager entityManager;
 
     @Transactional
-    public List<Attraction> getAttractionByType(String type){
+    public List<Attraction> getAttractionByType(String category){
         List<Attraction> attractions = null;
         Session session = entityManager.unwrap(Session.class);
         try{
             Criteria cr = session.createCriteria(Attraction.class);
-            cr.add(Restrictions.eq("type", type));
+            cr.add(Restrictions.eq("category", category));
             attractions = cr.list();
 
         }

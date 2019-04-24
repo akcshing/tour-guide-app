@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface AttractionRepositoryCustom {
 
-    List<Attraction> getAttractionByType(String type);
+    List<Attraction> getAttractionByCategory(String category);
 
 }
