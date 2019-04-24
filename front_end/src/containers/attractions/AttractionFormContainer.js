@@ -9,18 +9,12 @@ class AttractionFormContainer extends Component {
     this.handleAttractionPost= this.handleAttractionPost.bind(this)
   }
 
-  componentDidMount() {
-
-  }
-
   handleAttractionPost(attraction){
     const request = new Request();
     request.post('/attractions', attraction).then(() => {
       window.location = '/attractions'
     })
   }
-
-
 
   render(){
     return(

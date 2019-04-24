@@ -37,11 +37,14 @@ class AttractionListContainer extends Component {
     return(
       <div>
         <div className="attraction-header">
-          <h1>Attraction List</h1>
+          <h1>Attractions</h1>
           <Link to="/attractions/new">Create Attraction</Link>
+          <hr></hr>
         </div>
         <div className="attraction-filters">
+          <label>Filter by Category: </label>
           {filterOptions}
+          <hr></hr>
         </div>
         <div className="attraction-list">
               <AttractionList attractions = {this.state.attractions}/>

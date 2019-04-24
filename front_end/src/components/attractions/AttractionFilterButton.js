@@ -11,7 +11,7 @@ const AttractionFilterButton = (props) => {
 
   return (
     <React.Fragment>
-    <button onClick = {handleFilter}>{filterCriteria}</button>
+      <button className = "attr-button" onClick = {handleFilter}>{filterCriteria}</button>
     </React.Fragment>
   )
 }
