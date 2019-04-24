@@ -89,8 +89,8 @@ public class AttractionTest {
 
     @Test
     public void canSetAccessibility(){
-        attraction.setAccessibility(AccessibilityType.WHEELCHAIRACCES);
-        assertEquals(AccessibilityType.WHEELCHAIRACCES,attraction.getAccessibility());
+        attraction.setAccessibility(AccessibilityType.WHEELCHAIRACCESS);
+        assertEquals(AccessibilityType.WHEELCHAIRACCESS,attraction.getAccessibility());
     }
 
 

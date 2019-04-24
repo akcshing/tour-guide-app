@@ -1,7 +1,7 @@
 package com.codeclan.TourGuideApp.enums;
 
 public enum AccessibilityType {
-    WHEELCHAIRACCES("wheelchairAccess"),
+    WHEELCHAIRACCESS("wheelchairAccess"),
     DIETARYREQUIREMENTS("dietaryRequirements"),
     HEARINGINDUCTIONLOOP("hearingInductionLoop"),
     DOGFRIENDLY("dogFriendly"),
