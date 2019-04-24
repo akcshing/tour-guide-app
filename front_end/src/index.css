@@ -22,6 +22,14 @@ a{
 
 }
 
+button{
+  border-radius: 8px;
+  font-size: 14pt;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 80px;
+}
+
 ul {
 
 }
@@ -111,7 +119,9 @@ img {
   text-align: center;
   padding: 10px;
   flex: 1 0 25%;
-  margin: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 5px;
 }
 
 .booking-list {
@@ -127,7 +137,9 @@ img {
   border-style: solid;
   border-radius: 5px;
   flex: 1 0 25%;
-  margin: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 5px;
 }
 
 #accessibility, #opening-time, #time-of-day, #day{
