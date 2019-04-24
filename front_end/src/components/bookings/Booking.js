@@ -8,9 +8,6 @@ const Booking = ({booking, customer, attraction}) => {
   if(!customer) customer = {name: ""};
   if(!attraction) attraction = {name: ""};
 
-
-  console.log(booking);
-  console.log("booking's customer:", customer);
   const id = booking.id
   return(
     <React.Fragment>

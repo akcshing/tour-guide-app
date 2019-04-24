@@ -22,7 +22,6 @@ const BookingForm = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
-    console.log("event");
 
     const booking = {
       "day": event.target.day.value,
@@ -31,7 +30,6 @@ const BookingForm = (props) => {
       "attraction": "http://localhost:8080/attractions/" + event.target.attractions.value
     }
     props.handleBookingPost(booking)
-    console.log("confirm booking...",booking);
   }
 
   return(

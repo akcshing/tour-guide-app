@@ -16,7 +16,6 @@ class BookingEditForm extends Component {
   }
 
   componentDidMount(){
-    console.log(this.props);
   }
 
   handleSubmit(event){
