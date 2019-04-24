@@ -15,9 +15,6 @@ class BookingEditForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
-  }
-
   handleSubmit(event){
 
     event.preventDefault();
@@ -57,24 +54,27 @@ class BookingEditForm extends Component {
     return(
       <div>
       <form onSubmit={this.handleSubmit}>
-
+        <label>Select Customer: </label>
         <select name="customers" onChange={evt => this.setState({customer: evt.target.value})}>
         {allCustomers}
         </select>
-
+        <br></br>
+        <label>Select Attraction: </label>
         <select name="attractions" onChange={evt => this.setState({attraction: evt.target.value})}>
         {allAttractions}
         </select>
         <div id = "radio-wrapper">
-          <div className="timeOfDayRadio">
+          <div className="time">
+          <h3>Select Time of Day:</h3>
             {timeRadios}
           </div>
 
           <div className="day">
+          <h3>Select Day:</h3>
             {dayRadios}
           </div>
         </div>
-        <button type="submit">submit</button>
+        <button type="submit">Submit</button>
       </form>
       </div>
     )
