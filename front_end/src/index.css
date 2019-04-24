@@ -149,7 +149,7 @@ img {
 #radio-wrapper{
   display: flex;
   width: 50%;
-  justify-content: space-between;
+
 }
 
 .attr-button{
@@ -197,6 +197,12 @@ img {
   font-size: 14pt;
 }
 
+.day, .time{
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 200px;
+  margin-right: 50px;
+}
 .day div{
   font-size: 20pt;
 }

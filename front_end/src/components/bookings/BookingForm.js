@@ -105,7 +105,7 @@ const BookingForm = (props) => {
           </div> */}
         </div>
       </section>
-      <button type="submit">submit</button>
+      <button type="submit">Submit</button>
     </form>
     </div>
   )
