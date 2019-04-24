@@ -35,18 +35,20 @@ class HomeContainer extends Component {
         <h1>Your Daily Schedule</h1>
         <div className="sorted-bookings">
           <h2>Morning Bookings</h2>
+          <hr></hr>
           <div className="booking-list">
-
             <BookingList bookings = {this.state.morningBookings}/>
           </div>
-          <h2>Afternoon Bookings</h2>
-          <div className="booking-list">
 
+          <h2>Afternoon Bookings</h2>
+          <hr></hr>
+          <div className="booking-list">
             <BookingList bookings = {this.state.afternoonBookings}/>
           </div>
-          <h2>Evening Bookings</h2>
-          <div className="booking-list">
 
+          <h2>Evening Bookings</h2>
+          <hr></hr>
+          <div className="booking-list">
             <BookingList bookings = {this.state.eveningBookings}/>
           </div>
         </div>
