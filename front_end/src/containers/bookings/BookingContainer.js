@@ -57,7 +57,6 @@ class BookingContainer extends Component {
   }
 
   render(){
-    console.log("rendering...booking container", this.state.customer);
     if (!this.state.booking) return null;
     return(
       <div className = "booking">

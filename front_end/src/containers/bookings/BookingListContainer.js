@@ -15,16 +15,14 @@ class BookingListContainer extends Component {
     let request = new Request()
     request.get('/bookings').then((data) => {
       this.setState({bookings: data._embedded.bookings})
-      console.log("hi booking", data);
     })
   }
 
   render(){
-    console.log("rendering...");
     return(
       <div className="booking-list">
-      <Link to="/bookings/new">Create Booking</Link>
-      <BookingList bookings = {this.state.bookings}/>
+        <Link to="/bookings/new">Create Booking</Link>
+        <BookingList bookings = {this.state.bookings}/>
       </div>
     )
   }

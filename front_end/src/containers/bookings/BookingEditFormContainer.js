@@ -18,7 +18,6 @@ class BookingEditFormContainer extends Component {
   componentDidMount(){
     const request = new Request();
     request.get("/bookings" + this.props.id).then((booking) => {
-      console.log("data:" , booking);
       this.setState({booking: booking})
     }).then(() => {
       request.get("/customers").then((customers) => {
@@ -39,18 +38,17 @@ class BookingEditFormContainer extends Component {
   }
 
   render(){
-    console.log("rendering...");
     if(!this.state.booking) return null;
 
     return(
       <div className = "booking-edit-form">
-      <h1>Edit Booking Info</h1>
-      <BookingEditForm
-      booking={this.state.booking}
-      handleBookingUpdate = {this.handleBookingUpdate}
-      allCustomers = {this.state.customers}
-      allAttractions = {this.state.attractions}
-      />
+        <h1>Edit Booking Info</h1>
+        <BookingEditForm
+          booking={this.state.booking}
+          handleBookingUpdate = {this.handleBookingUpdate}
+          allCustomers = {this.state.customers}
+          allAttractions = {this.state.attractions}
+        />
       </div>
     )
   }
