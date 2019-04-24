@@ -10,17 +10,17 @@ const Attraction = ({attraction}) => {
   const id = urlPieces[urlPieces.length-1]
   return (
     <React.Fragment>
-        <Link to = {"/attractions/" + id} className="name">
+        <Link to = {"/attractions/" + id} className="attraction-name">
           {attraction.name}
         </Link>
       <p></p>
-      <img src={attraction.pic} alt={attraction.name} ></img>
-      <p>Location: {attraction.location}</p>
-      <p>Category: {attraction.category}</p>
-      <p>Desciption: {attraction.description}</p>
-      <p>Fee: {attraction.fee}</p>
-      <p>Accessibility: {attraction.accessibility}</p>
-      <p>Opening Time: {attraction.openingTime}</p>
+      <img id = "attr-img" src={attraction.pic} alt={attraction.name} ></img>
+      <p id = "location" >Location: {attraction.location}</p>
+      <p id = "category" >Category: {attraction.category}</p>
+      <p id = "description" >Desciption: {attraction.description}</p>
+      <p id = "fee" >Fee: {attraction.fee}</p>
+      <p id = "accessibility" >Accessibility: {attraction.accessibility}</p>
+      <p id = "opening-time" >Opening Time: {attraction.openingTime}</p>
       <br></br>
       <br></br>
 
