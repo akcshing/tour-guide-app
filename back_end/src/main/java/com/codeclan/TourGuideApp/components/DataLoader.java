@@ -7,7 +7,7 @@ import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.Attraction;
 import com.codeclan.TourGuideApp.models.Booking;
 import com.codeclan.TourGuideApp.models.Customer;
-import com.codeclan.TourGuideApp.repositories.AttractionRepository;
+import com.codeclan.TourGuideApp.repositories.attractions.AttractionRepository;
 import com.codeclan.TourGuideApp.repositories.bookings.BookingRepository;
 import com.codeclan.TourGuideApp.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;

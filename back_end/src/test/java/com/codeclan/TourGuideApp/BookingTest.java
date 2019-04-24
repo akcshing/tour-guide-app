@@ -4,7 +4,7 @@ import com.codeclan.TourGuideApp.enums.AccessibilityType;
 import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.*;
-import com.codeclan.TourGuideApp.repositories.AttractionRepository;
+import com.codeclan.TourGuideApp.repositories.attractions.AttractionRepository;
 import com.codeclan.TourGuideApp.repositories.bookings.BookingRepository;
 import com.codeclan.TourGuideApp.repositories.CustomerRepository;
 import org.junit.Before;
