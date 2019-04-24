@@ -5,12 +5,9 @@ const Attraction = ({attraction}) => {
 
   if (!attraction) return null;
 
-  const urlPieces = attraction._links.self.href.split('/');
-
-  const id = urlPieces[urlPieces.length-1]
   return (
     <React.Fragment>
-        <Link to = {"/attractions/" + id} className="attraction-name">
+        <Link to = {"/attractions/" + attraction.id} className="attraction-name">
           {attraction.name}
         </Link>
       <p></p>
