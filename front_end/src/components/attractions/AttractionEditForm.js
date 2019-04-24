@@ -52,20 +52,30 @@ class AttractionEditForm extends Component{
       })
 
       return (
-        <div>
+        <div id = "attraction-form-container">
           <form onSubmit={this.handleSubmit}>
+            <label>Name:</label>
             <input type="text" value={this.state.name} name="name" onChange={evt => this.setState({ name: evt.target.value })}/>
+            <label>Location:</label>
             <input type="text" value={this.state.location} name="location" onChange={evt => this.setState({ location: evt.target.value })}/>
+            <label>Category:</label>
             <input type="text" value={this.state.category} name="category" onChange={evt => this.setState({ category: evt.target.value })}/>
+            <label>Description:</label>
             <input type="text" value={this.state.description} name="description" onChange={evt => this.setState({ description: evt.target.value })}/>
+            <label>Fee:</label>
             <input type="number" value={this.state.fee} name="fee" onChange={evt => this.setState({ fee: evt.target.value })}/>
+            <label>Image Url:</label>
             <input type="text" value={this.state.pic} name="pic" onChange={evt => this.setState({ pic: evt.target.value })}/>
+            <label>Accessibility:</label>
             <select name="accessibility" onChange={evt => this.setState({accessibility: evt.target.value })}>
             {accessibilityOptions}
             </select>
+            <br></br>
+            <label>Opening Time:</label>
             <select name="openingTime" onChange={evt => this.setState({openingTime: evt.target.value})}>
             {timeOfDayOptions}
             </select>
+            <br></br>
             <button type="submit">Save</button>
           </form>
         </div>

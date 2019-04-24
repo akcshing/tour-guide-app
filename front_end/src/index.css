@@ -162,6 +162,20 @@ img {
   width: auto;
 
 }
+
+#attraction-form-container{
+  display: block;
+  width: auto;
+}
+
+#attraction-form-container input{
+  display: block;
+  width: 550px;
+  border-radius: 4px;
+}
+#attraction-form-container select{
+  width: auto;
+}
 .day div{
   font-size: 20pt;
 }
