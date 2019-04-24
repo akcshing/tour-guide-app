@@ -151,3 +151,19 @@ img {
   width: 50%;
   justify-content: space-between;
 }
+.day div{
+  font-size: 20pt;
+}
+
+.day input{
+  height: 1.8em;
+  width: 1.8em;
+}
+.time div{
+  font-size: 20pt;
+}
+
+.time input{
+  height: 1.8em;
+  width: 1.8em;
+}
