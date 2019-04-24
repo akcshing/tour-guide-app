@@ -22,9 +22,7 @@ const AttractionDetail = (props) => {
 
   return (
     <React.Fragment>
-    <Link to = {"/attractions/edit/" + id} className="name">
-      Edit
-    </Link>
+    <button onClick = {onEdit}>Edit</button>
     <button onClick = {onDelete}>Delete</button>
 
     </React.Fragment>

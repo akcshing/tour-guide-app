@@ -29,12 +29,20 @@ class AttractionContainer extends Component {
     })
   }
 
+  handleEdit(id){
+    window.location = "/attractions/edit/" + id
+  }
+
   render(){
     return(
       <div className = "attraction">
       <h1>Attraction</h1>
       <Attraction attraction = {this.state.attraction} />
-      <AttractionDetails attraction = {this.state.attraction} handleDelete = {this.handleDelete} handleEdit={this.handleEdit}/>
+      <AttractionDetails
+      attraction = {this.state.attraction}
+      handleDelete = {this.handleDelete}
+      handleEdit={this.handleEdit}
+      />
       </div>
     )
   }

@@ -52,6 +52,10 @@ class BookingContainer extends Component {
     })
   }
 
+  handleEdit(id){
+    window.location = "/bookings/edit/" + id
+  }
+
   render(){
     console.log("rendering...booking container", this.state.customer);
     if (!this.state.booking) return null;
@@ -63,7 +67,11 @@ class BookingContainer extends Component {
       customer = {this.state.customer}
       attraction = {this.state.attraction}
       />
-      <BookingDetails booking = {this.state.booking} handleDelete = {this.handleDelete}/>
+      <BookingDetails
+      booking = {this.state.booking}
+      handleDelete = {this.handleDelete}
+      handleEdit = {this.handleEdit}
+      />
       </div>
     )
   }

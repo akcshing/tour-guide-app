@@ -16,9 +16,7 @@ const BookingDetails = (props) => {
   }
 return (
   <div className = "booking-details">
-  <Link to = {"/bookings/edit/" + props.booking.id} className="name">
-    Edit
-  </Link>
+  <button onClick = {onEdit}>Edit</button>
   <button onClick = {onDelete}>Delete</button>
   </div>
 )
