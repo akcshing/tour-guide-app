@@ -14,10 +14,9 @@ const Booking = ({booking, customer, attraction}) => {
   const id = booking.id
   return(
     <React.Fragment>
-      <h1>Hello booking</h1>
       <Link to = {"/bookings/" + id}
       className="id">
-      {booking.id}
+      Booking: {booking.id}
       </Link>
       <p>Day: {booking.day}</p>
       <p>Time Of Day: {booking.timeOfDay}</p>

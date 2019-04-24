@@ -12,6 +12,7 @@ const BookingList = ({bookings}) => {
 
   return (
     <div className = "booking-list">
+    <h1>Bookings</h1>
     {mappedBookings}
     </div>
   )

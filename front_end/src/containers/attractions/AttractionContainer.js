@@ -2,12 +2,15 @@ import React, {Component} from "react";
 import Attraction from "../../components/attractions/Attraction"
 import AttractionDetails from "../../components/attractions/AttractionDetails";
 import Request from "../../helpers/request"
+import BookingList from "../../components/bookings/BookingList"
+
 
 class AttractionContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      attraction: null
+      attraction: null,
+      bookings: null
     }
   }
 
@@ -17,8 +20,14 @@ class AttractionContainer extends Component {
     const url = '/attractions/' + this.props.id;
     request.get(url).then((data) => {
       this.setState({attraction: data})
-
     })
+    .then(()=>{
+      request.get("/attractions/" + this.props.id + "/bookings")
+      .then((data) => {
+        this.setState({bookings: data._embedded.bookings})
+      })
+    })
+
   }
 
   handleDelete(id){
@@ -43,6 +52,7 @@ class AttractionContainer extends Component {
       handleDelete = {this.handleDelete}
       handleEdit={this.handleEdit}
       />
+      <BookingList bookings={this.state.bookings} />
       </div>
     )
   }

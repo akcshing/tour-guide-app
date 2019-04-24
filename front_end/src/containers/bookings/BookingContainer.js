@@ -61,7 +61,6 @@ class BookingContainer extends Component {
     if (!this.state.booking) return null;
     return(
       <div className = "booking">
-      <h1>Booking</h1>
       <Booking
       booking = {this.state.booking}
       customer = {this.state.customer}

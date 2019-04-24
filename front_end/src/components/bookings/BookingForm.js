@@ -24,9 +24,6 @@ const BookingForm = (props) => {
     event.preventDefault();
     console.log("event");
 
-
-
-
     const booking = {
       "day": event.target.day.value,
       "timeOfDay": event.target.timeOfDay.value,

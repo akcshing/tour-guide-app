@@ -47,7 +47,7 @@ class BookingEditForm extends Component {
     const timeRadios = timeOfDayArr.map((time, index) => {
       return <Radio key = {index} value={time} enum="timeOfDay" />
     })
-    
+
     const dayRadios = dayArr.map((day, index) => {
       return <Radio key = {index} value={day} enum="day" />
     })

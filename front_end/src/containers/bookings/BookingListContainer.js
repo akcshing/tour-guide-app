@@ -23,7 +23,6 @@ class BookingListContainer extends Component {
     console.log("rendering...");
     return(
       <div className="booking-list">
-      <h1>Booking List</h1>
       <Link to="/bookings/new">Create Booking</Link>
       <BookingList bookings = {this.state.bookings}/>
       </div>
