@@ -130,6 +130,6 @@ img {
   margin: 25px;
 }
 
-#accessibility, #opening-time{
+#accessibility, #opening-time, #time-of-day, #day{
   text-transform: capitalize;
 }

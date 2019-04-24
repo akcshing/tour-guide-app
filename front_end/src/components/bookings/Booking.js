@@ -15,8 +15,8 @@ const Booking = ({booking, customer, attraction}) => {
       className="id">
       Booking: {booking.id}
       </Link>
-      <p>Day: {booking.day}</p>
-      <p>Time Of Day: {booking.timeOfDay}</p>
+      <p id = "day">Day: {booking.day.toLowerCase()}</p>
+      <p id = "time-of-day">Time Of Day: {booking.timeOfDay.toLowerCase()}</p>
       <p>Customer: {customer.name}</p>
       <p>Attraction: {attraction.name}</p>
       </div>
