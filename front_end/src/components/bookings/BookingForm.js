@@ -6,10 +6,10 @@ const BookingForm = (props) => {
   if (!props.attractions) return null;
 
   const allCustomers = props.customers.map((customer, index) => {
-    return <option key={index} value={index}>{customer.name}</option>
+    return <option key={index} value={index + 1}>{customer.name}</option>
   })
   const allAttractions = props.attractions.map((attraction, index) => {
-    return <option key={index} value={index}>{attraction.name}</option>
+    return <option key={index} value={index + 1}>{attraction.name}</option>
   })
 
   function handleSubmit(event){
