@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value =" /attractions")
+@RequestMapping(value ="/attractions")
 public class AttractionController {
 
     @Autowired

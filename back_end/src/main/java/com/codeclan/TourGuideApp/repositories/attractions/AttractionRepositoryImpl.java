@@ -12,13 +12,13 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
 
-public class AttractionRepositoryImpl {
+public class AttractionRepositoryImpl implements AttractionRepositoryCustom {
 
     @Autowired
     EntityManager entityManager;
 
     @Transactional
-    public List<Attraction> getAttractionByType(String category){
+    public List<Attraction> getAttractionByCategory(String category){
         List<Attraction> attractions = null;
         Session session = entityManager.unwrap(Session.class);
         try{
