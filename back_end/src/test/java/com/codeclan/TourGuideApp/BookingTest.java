@@ -87,26 +87,11 @@ public class BookingTest {
 
     }
 
-    //    @Test
-//    public void canGetTourGroup(){
-//        assertEquals(0,booking.getTourGroup().size());
-//    }
-//
-//    @Test
-//    public void canSetTourGroup(){
-//        ArrayList<Customer> customers = new ArrayList<>();
-//        customers.add(customer1);
-//        customers.add(customer2);
-//        booking.setTourGroup(customers);
-//        assertEquals(2,booking.getGroupSize());
-//    }
-//
-//    @Test
-//    public void canAddCustomerToTourGroup(){
-//        booking.addCustomer(customer1);
-//        booking.addCustomer(customer2);
-//        assertEquals(2,booking.getGroupSize());
-//    }
+    @Test
+    public void canGetCustomer(){
+        assertEquals(customer1,booking.getCustomer());
+    }
+
 
 
 }
