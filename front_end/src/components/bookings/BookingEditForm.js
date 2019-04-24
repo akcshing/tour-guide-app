@@ -57,12 +57,12 @@ class BookingEditForm extends Component {
 
         <div className="timeOfDayRadio">
           <div>
-          <input type = "radio" id="timeOfDay" name="timeOfDay" value="MORNING"/>
+          <input type = "radio" id="morning" name="timeOfDay" value="MORNING"/>
           <label for="morning">Morning</label>
           </div>
 
           <div>
-          <input  type = "radio" id="timeOfDay" name="timeOfDay" value="AFTERNOON"/>
+          <input  type = "radio" id="afternoon" name="timeOfDay" value="AFTERNOON"/>
           <label for="afternoon">Afternoon</label>
           </div>
 

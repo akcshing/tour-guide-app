@@ -1,4 +1,6 @@
 import React from 'react';
+import Radio from "../radio/Radio"
+import {dayArr, timeOfDayArr} from "../../helpers/enums"
 
 const BookingForm = (props) => {
 
@@ -10,6 +12,12 @@ const BookingForm = (props) => {
   })
   const allAttractions = props.attractions.map((attraction, index) => {
     return <option key={index} value={index + 1}>{attraction.name}</option>
+  })
+  const timeRadios = timeOfDayArr.map((time, index) => {
+    return <Radio key = {index} value={time} enum="time" />
+  })
+  const dayRadios = dayArr.map((day, index) => {
+    return <Radio key = {index} value={day} enum="day" />
   })
 
   function handleSubmit(event){
@@ -42,7 +50,7 @@ const BookingForm = (props) => {
       </select>
 
       <div className="time">
-        <div>
+        {/* <div>
         <input type = "radio" id="morning" name="time" value="MORNING"/>
         <label for="morning">Morning</label>
         </div>
@@ -55,11 +63,13 @@ const BookingForm = (props) => {
         <div>
         <input type = "radio" id="evening" name="time" value="EVENING"/>
         <label for="evening">Evening</label>
-        </div>
+        </div> */}
+        {timeRadios}
       </div>
 
       <div className="day">
-        <div>
+      {dayRadios}
+        {/*<div>
         <input type = "radio" id="monday" name="day" value="MONDAY"/>
         <label for="monday">Monday</label>
         </div>
@@ -92,7 +102,7 @@ const BookingForm = (props) => {
         <div>
         <input type = "radio" id="sunday" name="day" value="SUNDAY"/>
         <label for="sunday">Sunday</label>
-        </div>
+        </div> */}
       </div>
       <button type="submit">submit</button>
     </form>
