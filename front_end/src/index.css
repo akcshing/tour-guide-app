@@ -145,3 +145,9 @@ img {
 #accessibility, #opening-time, #time-of-day, #day{
   text-transform: capitalize;
 }
+
+#radio-wrapper{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}

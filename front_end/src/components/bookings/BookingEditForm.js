@@ -65,13 +65,14 @@ class BookingEditForm extends Component {
         <select name="attractions" onChange={evt => this.setState({attraction: evt.target.value})}>
         {allAttractions}
         </select>
+        <div id = "radio-wrapper">
+          <div className="timeOfDayRadio">
+            {timeRadios}
+          </div>
 
-        <div className="timeOfDayRadio">
-          {timeRadios}
-        </div>
-
-        <div className="day">
-          {dayRadios}
+          <div className="day">
+            {dayRadios}
+          </div>
         </div>
         <button type="submit">submit</button>
       </form>
