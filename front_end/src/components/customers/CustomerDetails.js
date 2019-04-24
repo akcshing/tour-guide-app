@@ -1,5 +1,5 @@
 import React  from 'react';
-import {Link} from 'react-router-dom';
+
 
 const CustomerDetails = (props) => {
 
@@ -24,11 +24,8 @@ const CustomerDetails = (props) => {
 
   return (
     <React.Fragment>
-    <Link to = {"/customers/edit/" + id} className="name">
-      Edit
-    </Link>
+    <button onClick = {onEdit}>Edit</button>
     <button onClick = {onDelete}>Delete</button>
-
     </React.Fragment>
   )
 }

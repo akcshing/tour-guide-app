@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Radio from "../radio/Radio"
+import {dayArr, timeOfDayArr} from "../../helpers/enums"
+
 
 class BookingEditForm extends Component {
   constructor(props){
@@ -41,6 +44,15 @@ class BookingEditForm extends Component {
       return <option key={index} value ={attraction._links.self.href}>{attraction.name}</option>
     })
 
+    const timeRadios = timeOfDayArr.map((time, index) => {
+      return <Radio key = {index} value={time} enum="timeOfDay" />
+    })
+
+    const dayRadios = dayArr.map((day, index) => {
+      return <Radio key = {index} value={day} enum="day" />
+    })
+
+
 
 
     return(
@@ -56,57 +68,11 @@ class BookingEditForm extends Component {
         </select>
 
         <div className="timeOfDayRadio">
-          <div>
-          <input type = "radio" id="timeOfDay" name="timeOfDay" value="MORNING"/>
-          <label for="morning">Morning</label>
-          </div>
-
-          <div>
-          <input  type = "radio" id="timeOfDay" name="timeOfDay" value="AFTERNOON"/>
-          <label for="afternoon">Afternoon</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="evening" name="timeOfDay" value="EVENING"/>
-          <label for="evening">Evening</label>
-          </div>
+          {timeRadios}
         </div>
 
         <div className="day">
-          <div>
-          <input type = "radio" id="monday" name="day" value="MONDAY"/>
-          <label for="monday">Monday</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="tuesday" name="day" value="TUESDAY"/>
-          <label for="tuesday">Tuesday</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="wednesday" name="day" value="WEDNESDAY"/>
-          <label for="wednesday">Wednesday</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="thursday" name="day" value="THURSDAY"/>
-          <label for="thursday">Thursday</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="friday" name="day" value="FRIDAY"/>
-          <label for="friday">Friday</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="saturday" name="day" value="SATURDAY"/>
-          <label for="saturday">Saturday</label>
-          </div>
-
-          <div>
-          <input type = "radio" id="sunday" name="day" value="SUNDAY"/>
-          <label for="sunday">Sunday</label>
-          </div>
+          {dayRadios}
         </div>
         <button type="submit">submit</button>
       </form>
