@@ -34,13 +34,13 @@ li {
 img {
   border-style: solid;
   border-color: white;
-  border-radius: 5px;
+  border-radius: 20px;
   width: 400px;
   height: auto;
 }
 .navbar-header {
+  font-weight: bold;
   display: flex;
-  font-size: 25px;
   background-color: pink;
   border-style: solid;
   border-color: white;
@@ -49,6 +49,7 @@ img {
 
 .navLink {
   display: inline;
+  font-size: 30px;
 }
 
 .attraction {
