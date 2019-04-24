@@ -22,6 +22,7 @@ class BookingListContainer extends Component {
     return(
       <div>
       <h1>Bookings</h1>
+      <hr></hr>
       <Link to="/bookings/new">Create Booking</Link>
       <div className="booking-list">
         <BookingList bookings = {this.state.bookings}/>

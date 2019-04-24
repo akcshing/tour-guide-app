@@ -34,6 +34,7 @@ const BookingForm = (props) => {
 
   return(
     <div id = "create-booking-container">
+    <h3>Create Booking:</h3>
     <form onSubmit={handleSubmit}>
       <label>Select Customer: </label>
       <select name="customers">
