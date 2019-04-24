@@ -128,21 +128,13 @@ public class Attraction {
     void setOpeningTime(TimeOfDayType openingTime) {
         this.openingTime = openingTime;
     }
+
+    public AccessibilityType getAccessibility() {
+        return accessibility;
+    }
+
+    public void setAccessibility(AccessibilityType accessibility) {
+        this.accessibility = accessibility;
+    }
 }
 
-
-//    public ArrayList<AccessibilityType> getAccessibility() {
-//        return accessibility;
-//    }
-//
-//    public void addManyAccessibility(ArrayList<AccessibilityType> accessibilityList) {
-//        this.accessibility = accessibilityList;
-//    }
-
-//    public void addAccessibility(AccessibilityType accessibility){
-//        this.accessibility.add(accessibility);
-//    }
-//
-//    public boolean removeAccessibility(AccessibilityType accessibility){
-//        return this.accessibility.remove(accessibility);
-//    }

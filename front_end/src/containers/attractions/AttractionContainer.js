@@ -30,7 +30,6 @@ class AttractionContainer extends Component {
   }
 
   render(){
-
     return(
       <div className = "attraction">
       <h1>Attraction</h1>
