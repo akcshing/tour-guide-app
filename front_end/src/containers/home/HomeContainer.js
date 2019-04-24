@@ -32,13 +32,19 @@ class HomeContainer extends Component {
   render(){
     return(
       <div className="sorted-bookings">
+      <h2>Morning Bookings</h2>
       <div className="booking-list">
+
         <BookingList bookings = {this.state.morningBookings}/>
       </div>
+      <h2>Afternoon Bookings</h2>
       <div className="booking-list">
+
         <BookingList bookings = {this.state.afternoonBookings}/>
       </div>
+      <h2>Evening Bookings</h2>
       <div className="booking-list">
+
         <BookingList bookings = {this.state.eveningBookings}/>
       </div>
       </div>
