@@ -1,5 +1,6 @@
 package com.codeclan.TourGuideApp;
 
+import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.Booking;
 import com.codeclan.TourGuideApp.repositories.bookings.BookingRepository;
@@ -34,7 +35,8 @@ public class TourGuideAppApplicationTests {
 
 	@Test
 	public void canGetBookingByDay(){
-		List<Booking> bookings = 
+		List<Booking> bookings = bookingRepository.getBookingsByDay(DayType.MONDAY);
+		assertEquals(4, bookings.size());
 	}
 
 }
