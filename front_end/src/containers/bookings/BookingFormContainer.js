@@ -27,7 +27,6 @@ class BookingFormContainer extends Component {
   }
 
   handleBookingPost(booking){
-    console.log("container handlebooking", booking);
     const request = new Request();
     request.post('/bookings', booking).then(() => {
       window.location = '/bookings'

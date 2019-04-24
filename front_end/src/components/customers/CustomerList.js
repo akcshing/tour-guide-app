@@ -5,7 +5,7 @@ const CustomerList = ({customers}) => {
   if (!customers) return null;
 
   const mappedCustomers = customers.map((customer, index) => {
-    return <Customer key={index} customer={customer}/>
+    return <div className="customer-container"><Customer key={index} customer={customer}/></div>
   })
   return (
     <div className = "customer-list">
