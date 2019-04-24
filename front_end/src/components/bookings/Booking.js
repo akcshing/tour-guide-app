@@ -10,7 +10,7 @@ const Booking = ({booking, customer, attraction}) => {
 
   const id = booking.id
   return(
-    <React.Fragment>
+    <div className = "booking-container">
       <Link to = {"/bookings/" + id}
       className="id">
       Booking: {booking.id}
@@ -19,7 +19,7 @@ const Booking = ({booking, customer, attraction}) => {
       <p>Time Of Day: {booking.timeOfDay}</p>
       <p>Customer: {customer.name}</p>
       <p>Attraction: {attraction.name}</p>
-      </React.Fragment>
+      </div>
   )
 
 }

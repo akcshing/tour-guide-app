@@ -22,10 +22,14 @@ class AttractionListContainer extends Component {
   render(){
 
     return(
-      <div className="attraction-list">
-      <h1>Attraction List</h1>
-      <Link to="/attractions/new">Create Attraction</Link>
-            <AttractionList attractions = {this.state.attractions}/>
+      <div>
+        <div className="attraction-header">
+          <h1>Attraction List</h1>
+          <Link to="/attractions/new">Create Attraction</Link>
+        </div>
+        <div className="attraction-list">
+              <AttractionList attractions = {this.state.attractions}/>
+        </div>
       </div>
     )
   }

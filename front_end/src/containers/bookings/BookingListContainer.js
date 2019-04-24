@@ -20,9 +20,12 @@ class BookingListContainer extends Component {
 
   render(){
     return(
+      <div>
+      <h1>Bookings</h1>
+      <Link to="/bookings/new">Create Booking</Link>
       <div className="booking-list">
-        <Link to="/bookings/new">Create Booking</Link>
         <BookingList bookings = {this.state.bookings}/>
+      </div>
       </div>
     )
   }
