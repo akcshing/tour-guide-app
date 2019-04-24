@@ -2,11 +2,8 @@ package com.codeclan.TourGuideApp.models;
 
 import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
-import java.util.ArrayList;
 
 @Entity
 @Table(name = "bookings")
@@ -26,10 +23,6 @@ public class Booking {
     @JoinColumn(name = "attraction_id")
     private Attraction attraction;
 
-//    @ManyToMany()
-//    @Column
-//    private ArrayList<Customer> tourGroup;
-
 
     @JsonIgnoreProperties("bookings")
     @ManyToOne
@@ -46,7 +39,6 @@ public class Booking {
         this.timeOfDay = timeOfDay;
         this.attraction = attraction;
         this.customer = customer;
-//        this.tourGroup = new ArrayList<>();
         this.day = day;
 
     }
@@ -98,18 +90,3 @@ public class Booking {
         this.customer = customer;
     }
 }
-
-//    public ArrayList<Customer> getTourGroup() {
-//        return tourGroup;
-//    }
-//
-//    public void setTourGroup(ArrayList<Customer> tourGroup) {
-//        this.tourGroup = tourGroup;
-//    }
-//
-//    public void addCustomer(Customer customer){
-//        this.tourGroup.add(customer);
-//    }
-//        public int getGroupSize(){
-//        return getTourGroup().size();
-//    }

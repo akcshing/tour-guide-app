@@ -16,7 +16,6 @@ code {
 
 ul {
 
-
 }
 
 li {
@@ -27,13 +26,13 @@ li {
 img {
   border-style: solid;
   border-color: white;
-  border-radius: 5px;
+  border-radius: 20px;
   width: 400px;
   height: auto;
 }
 .navbar-header {
+  font-weight: bold;
   display: flex;
-  font-size: 25px;
   background-color: pink;
   border-style: solid;
   border-color: white;
@@ -42,6 +41,18 @@ img {
 
 .navLink {
   display: inline;
+  font-size: 30px;
+}
+
+.attraction {
+  width: 800px;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  flex: 1 0 25%;
+  margin: 25px;
 }
 
 .attraction-list {
@@ -59,6 +70,16 @@ img {
   margin: 25px;
 }
 
+.customer {
+
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 25px;
+}
 
 .customer-list {
   display: grid;
@@ -66,6 +87,29 @@ img {
 }
 
 .customer-container {
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  flex: 1 0 25%;
+  margin: 25px;
+}
+
+.booking {
+  text-align: center;
+  padding: 10px;
+  flex: 1 0 25%;
+  margin: 25px;
+}
+
+.booking-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.booking-container {
   width: 400px;
   text-align: center;
   padding: 10px;
