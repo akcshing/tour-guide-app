@@ -44,15 +44,15 @@ class AttractionContainer extends Component {
 
   render(){
     return(
-      <div>
+      <div id = "single-attraction-container">
           <div className = "attraction">
-          <h1>Attraction</h1>
-          <Attraction attraction = {this.state.attraction} />
-          <AttractionDetails
-          attraction = {this.state.attraction}
-          handleDelete = {this.handleDelete}
-          handleEdit={this.handleEdit}
-          />
+            <h1>Attraction</h1>
+            <Attraction attraction = {this.state.attraction} />
+            <AttractionDetails
+              attraction = {this.state.attraction}
+              handleDelete = {this.handleDelete}
+              handleEdit={this.handleEdit}
+            />
           </div>
 
         <BookingList bookings={this.state.bookings} />

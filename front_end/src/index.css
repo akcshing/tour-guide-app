@@ -196,6 +196,21 @@ img {
   border-radius: 4px;
   font-size: 14pt;
 }
+#single-attraction-container{
+  display: inline-block;
+  width: 60%;
+  padding: 0px;
+  margin: 0px;
+}
+#single-attraction-container .booking-list, #single-attraction-container .booking{
+  padding: 0px;
+  margin: 0px;
+}
+
+#single-attraction-container .booking-container{
+  margin-right: 10px;
+  padding-left: 0px;
+}
 
 .day, .time{
   border: 2px solid black;
