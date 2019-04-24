@@ -14,7 +14,7 @@ const BookingForm = (props) => {
     return <option key={index} value={index + 1}>{attraction.name}</option>
   })
   const timeRadios = timeOfDayArr.map((time, index) => {
-    return <Radio key = {index} value={time} enum="time" />
+    return <Radio key = {index} value={time} enum="timeOfDay" />
   })
   const dayRadios = dayArr.map((day, index) => {
     return <Radio key = {index} value={day} enum="day" />
@@ -29,7 +29,7 @@ const BookingForm = (props) => {
 
     const booking = {
       "day": event.target.day.value,
-      "timeOfDay": event.target.time.value,
+      "timeOfDay": event.target.timeOfDay.value,
       "customer": "http://localhost:8080/customers/" + event.target.customers.value,
       "attraction": "http://localhost:8080/attractions/" + event.target.attractions.value
     }

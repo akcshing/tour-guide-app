@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {accessabilityArr, timeOfDayArr} from "../../helpers/enums"
+
 
 class AttractionEditForm extends Component{
 
@@ -10,6 +12,7 @@ class AttractionEditForm extends Component{
       category: props.attraction.category,
       description: props.attraction.description,
       fee: props.attraction.fee,
+      pic: props.attraction.pic,
       accessibility: props.attraction.accessibility,
       openingTime: props.attraction.openingTime
 
@@ -30,6 +33,7 @@ class AttractionEditForm extends Component{
         "category": event.target.category.value,
         "description": event.target.description.value,
         "fee": event.target.fee.value,
+        "pic": event.target.pic.value,
         "accessibility": event.target.accessibility.value,
         "openingTime": event.target.openingTime.value
       }
@@ -37,7 +41,16 @@ class AttractionEditForm extends Component{
     this.props.handleAttractionUpdate(attraction)
     }
 
+
+
     render(){
+      const accessibilityOptions = accessabilityArr.map((accessibility, index) => {
+        return <option key={index} value={accessibility.value}>{accessibility.displayName}</option>
+      })
+      const timeOfDayOptions = timeOfDayArr.map((time, index) => {
+        return <option key={index} value={time.value}>{time.displayName}</option>
+      })
+
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
@@ -46,9 +59,13 @@ class AttractionEditForm extends Component{
             <input type="text" value={this.state.category} name="category" onChange={evt => this.setState({ category: evt.target.value })}/>
             <input type="text" value={this.state.description} name="description" onChange={evt => this.setState({ description: evt.target.value })}/>
             <input type="number" value={this.state.fee} name="fee" onChange={evt => this.setState({ fee: evt.target.value })}/>
-            <input type="text" value={this.state.accessibility} name="accessibility" onChange={evt => this.setState({ accessibility: evt.target.value })}/>
-            <input type="text" value={this.state.openingTime} name="openingTime" onChange={evt => this.setState({ openingTime: evt.target.value })}/>
-
+            <input type="text" value={this.state.pic} name="pic" onChange={evt => this.setState({ pic: evt.target.value })}/>
+            <select name="accessibility" onChange={evt => this.setState({accessibility: evt.target.value })}>
+            {accessibilityOptions}
+            </select>
+            <select name="openingTime" onChange={evt => this.setState({openingTime: evt.target.value})}>
+            {timeOfDayOptions}
+            </select>
             <button type="submit">Save</button>
           </form>
         </div>
