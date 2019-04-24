@@ -23,7 +23,7 @@ public class BookingRepositoryImpl implements BookingRepositoryCustom{
         Session session = entityManager.unwrap(Session.class);
         try{
             Criteria cr = session.createCriteria(Booking.class);
-            cr.add(Restrictions.eq("TimeOfDayType",timeOfDay));
+            cr.add(Restrictions.eq("timeOfDay",timeOfDay));
             bookings = cr.list();
         }
         catch (HibernateException e){
