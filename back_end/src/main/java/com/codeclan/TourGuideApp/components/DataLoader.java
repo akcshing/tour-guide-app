@@ -67,24 +67,12 @@ public class DataLoader implements ApplicationRunner {
         Attraction holyrood = new Attraction("Palace of Holyroodhouse","Canongate, Edinburgh EH8 8DX, Scotland","The Palace of Holyroodhouse is the official residence in Scotland of Her Majesty The Queen. Open throughout the year, the Palace of Holyroodhouse stands at the end of Edinburgh's Royal Mile. Explore the Palace's close associations with some of Scotland’s most well-known historic figures such as Mary, Queen of Scots and Bonnie Prince Charlie, and learn how today it is used by The Queen when carrying out official engagements in Scotland.",16.00,"https://www.virginexperiencedays.co.uk/content/img/product/large/visit-to-palace-of-27150249.jpg",AccessibilityType.WHEELCHAIRACCES,"Castle", TimeOfDayType.MORNING);
         attractionRepository.save(holyrood);
 
-//        Attraction castle = new Attraction("castle","edinburgh","on a rock",15.00,"pic","historical", TimeOfDayType.MORNING);
-//        attractionRepository.save(castle);
-//
-//        Attraction castle = new Attraction("castle","edinburgh","on a rock",15.00,"pic","historical", TimeOfDayType.MORNING);
-//        attractionRepository.save(castle);
-//
-//        Attraction castle = new Attraction("castle","edinburgh","on a rock",15.00,"pic","historical", TimeOfDayType.MORNING);
-//        attractionRepository.save(castle);
-//
-//        Attraction castle = new Attraction("castle","edinburgh","on a rock",15.00,"pic","historical", TimeOfDayType.MORNING);
-//        attractionRepository.save(castle);
-//
-//        Attraction castle = new Attraction("castle","edinburgh","on a rock",15.00,"pic","historical", TimeOfDayType.MORNING);
-//        attractionRepository.save(castle);
-//
-////        Attraction castle = new Attraction("castle","edinburgh","on a rock",15.00,"pic","historical", TimeOfDayType.MORNING);
-//        attractionRepository.save(castle);
+        Attraction waterOfLeithWalkway = new Attraction("Water of Leith Walkway","24 Lanark Road, Edinburgh EH14 1TQ, Scotland","Formal walkway through Edinburgh city centre, goes from one edge of the city to Ocean Terminal",00.00,"https://thedunstane.com/wp-content/uploads/2018/04/The-Water-of-Leith-Walkway-1-684x463-c-default.jpg",AccessibilityType.DOGFRIENDLY,"Garden", TimeOfDayType.AFTERNOON);
+    attractionRepository.save(waterOfLeithWalkway);
 
+                Attraction holyroodAbbey = new Attraction("Holyrood Abbey","Canongate, Royal Mile, Edinburgh, Scotland","The Abbey is open to the weather and can be viewed from the inside and outside through the gardens. Nice conclusion to palace tour",14.00,"https://www.historicenvironment.scot/media/1354/holyrood-4.jpg?anchor=center&mode=crop&width=800&height=480&rnd=131050298810000000",AccessibilityType.CHILDFRIENDLY,"Special Interest", TimeOfDayType.MORNING);
+        attractionRepository.save(holyroodAbbey);
+        
         Customer john = new Customer("John Jack","5 Lighting Road, Leeds",23,"01555 789080", "JJack@email.com");
         customerRepository.save(john);
 
