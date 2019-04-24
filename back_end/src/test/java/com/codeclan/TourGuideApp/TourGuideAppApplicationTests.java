@@ -28,7 +28,7 @@ public class TourGuideAppApplicationTests {
 	@Test
 	public void canGetBookingsByTimeOfDay(){
 		List<Booking> bookings = bookingRepository.getBookingsByTimeOfDay(TimeOfDayType.MORNING);
-		assertEquals(1,bookings.size());
+		assertEquals(4,bookings.size());
 
 	}
 
