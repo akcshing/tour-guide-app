@@ -92,6 +92,12 @@ public class BookingTest {
         assertEquals(customer1,booking.getCustomer());
     }
 
+    @Test
+    public void canSetCustomer(){
+        booking.setCustomer(customer2);
+        assertEquals(customer2,booking.getCustomer());
+    }
+
 
 
 }
