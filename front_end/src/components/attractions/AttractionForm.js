@@ -32,23 +32,31 @@ const AttractionForm = (props) => {
 
 
       return (
-        <div>
+        <div id = "create-attraction-container">
+          <h3>Create Attraction</h3>
           <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Name" name="name"/>
+            <br></br>
             <input type="text" placeholder="Location" name="location"/>
+            <br></br>
             <input type="text" placeholder="Category" name="category"/>
+            <br></br>
             <input type="text" placeholder="Description" name="description"/>
+            <br></br>
             <input type="number" placeholder="Fee" name="fee"/>
+            <br></br>
             <input type="text" placeholder="Pic url" name="pic"/>
+            <br></br>
+            <label>Accessibility: </label>
             <select name="accessibility">
             {accessibilityOptions}
             </select>
+            <br></br>
+            <label>Opening Time: </label>
             <select name="openingTime">
             {timeOfDayOptions}
             </select>
-
-
-
+            <br></br>
             <button type="submit">Save</button>
           </form>
         </div>

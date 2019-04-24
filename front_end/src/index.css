@@ -176,6 +176,21 @@ img {
 #attraction-form-container select{
   width: auto;
 }
+
+#create-booking-container label{
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#create-attraction-container input{
+  width: 300px;
+  border-radius: 4px;
+  font-size: 14pt;
+}
+#create-attraction-container select{
+  font-size: 10pt;
+}
+
 .day div{
   font-size: 20pt;
 }

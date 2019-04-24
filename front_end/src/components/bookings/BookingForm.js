@@ -33,13 +33,14 @@ const BookingForm = (props) => {
   }
 
   return(
-    <div>
+    <div id = "create-booking-container">
     <form onSubmit={handleSubmit}>
-
+      <label>Select Customer: </label>
       <select name="customers">
       {allCustomers}
       </select>
-
+      <br></br>
+      <label>Select Attraction: </label>
       <select name="attractions">
       {allAttractions}
       </select>
@@ -66,7 +67,7 @@ const BookingForm = (props) => {
 
         <div className="day">
         <h3>Select Day:</h3>
-        {dayRadios}
+          {dayRadios}
           {/*<div>
           <input type = "radio" id="monday" name="day" value="MONDAY"/>
           <label for="monday">Monday</label>
