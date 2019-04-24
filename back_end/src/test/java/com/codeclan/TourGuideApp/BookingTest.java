@@ -5,7 +5,7 @@ import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.models.*;
 import com.codeclan.TourGuideApp.repositories.AttractionRepository;
-import com.codeclan.TourGuideApp.repositories.BookingRepository;
+import com.codeclan.TourGuideApp.repositories.bookings.BookingRepository;
 import com.codeclan.TourGuideApp.repositories.CustomerRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,8 +13,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 

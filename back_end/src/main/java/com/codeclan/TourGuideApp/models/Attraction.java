@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "attractions")
@@ -41,10 +42,8 @@ public class Attraction {
     @Column
     private TimeOfDayType openingTime;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "attraction")
-    @JoinColumn(name = "booking_id", nullable = true)
-    private Booking booking;
+    @OneToMany(mappedBy = "attraction")
+    private List<Booking> bookings;
 
 
     public Attraction(String name, String location, String description, double fee, String pic, AccessibilityType accessibility, String category, TimeOfDayType openingTime){
@@ -56,6 +55,7 @@ public class Attraction {
         this.accessibility = accessibility;
         this.category = category;
         this.openingTime = openingTime;
+        this.bookings = new ArrayList<>();
 
     }
 
@@ -135,6 +135,14 @@ public class Attraction {
 
     public void setAccessibility(AccessibilityType accessibility) {
         this.accessibility = accessibility;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
 

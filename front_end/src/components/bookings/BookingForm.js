@@ -34,7 +34,7 @@ const BookingForm = (props) => {
       "attraction": "http://localhost:8080/attractions/" + event.target.attractions.value
     }
     props.handleBookingPost(booking)
-    console.log("confirm booking",booking);
+    console.log("confirm booking...",booking);
   }
 
   return(
