@@ -1,5 +1,6 @@
 package com.codeclan.TourGuideApp.contoller;
 
+import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 import com.codeclan.TourGuideApp.helpers.EnumsConverter;
 import com.codeclan.TourGuideApp.models.Booking;
@@ -16,9 +17,15 @@ public class BookingController extends EnumsConverter {
     @Autowired
     BookingRepository bookingRepository;
 
-    @GetMapping (value = "/sort/{timeOfDay}")
+    @GetMapping (value = "/sort_by_time/{timeOfDay}")
     public List<Booking> getBookingsByTimeOfDay(@PathVariable String timeOfDay){
        TimeOfDayType timeOfDayAsEnum = setToEnum(timeOfDay);
         return bookingRepository.getBookingsByTimeOfDay(timeOfDayAsEnum);
+    }
+
+    @GetMapping (value = "/sort_by_day/{day}")
+    public List<Booking> getBookingsByDay(@PathVariable String day){
+        DayType dayAsEnum = setDayToEnum(day);
+        return bookingRepository.getBookingsByDay(dayAsEnum);
     }
 }
