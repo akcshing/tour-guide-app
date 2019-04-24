@@ -24,9 +24,10 @@ class CustomerListContainer extends Component {
     return(
       <div>
         <div className="customer-header">
-          <h1>Customer List</h1>
+          <h1>Customers</h1>
           <Link to="/customers/new">Create Customer</Link>
         </div>
+        <hr></hr>
         <div className="customer-list">
           <CustomerList customers = {this.state.customers}/>
         </div>
