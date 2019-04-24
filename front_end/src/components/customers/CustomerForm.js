@@ -17,13 +17,18 @@ const CustomerForm = (props) => {
 
   }
       return (
-        <div>
+        <div id = "create-customer-container">
           <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Name" name="name"/>
+            <br></br>
             <input type="number" placeholder="Age" name="age"/>
+            <br></br>
             <input type="text" placeholder="Address" name="address"/>
+            <br></br>
             <input type="text" placeholder="Tel" name="contactNumber"/>
+            <br></br>
             <input type="text" placeholder="Email" name="email"/>
+            <br></br>
             <button type="submit">Save</button>
           </form>
         </div>

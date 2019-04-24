@@ -191,6 +191,12 @@ img {
   font-size: 10pt;
 }
 
+#create-customer-container input{
+  width: 300px;
+  border-radius: 4px;
+  font-size: 14pt;
+}
+
 .day div{
   font-size: 20pt;
 }
