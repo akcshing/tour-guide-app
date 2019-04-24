@@ -22,10 +22,14 @@ class CustomerListContainer extends Component {
   render(){
 
     return(
-      <div className="customer-list">
-      <h1>Customer List</h1>
-      <Link to="/customers/new">Create Customer</Link>
-      <CustomerList customers = {this.state.customers}/>
+      <div>
+        <div className="customer-header">
+          <h1>Customer List</h1>
+          <Link to="/customers/new">Create Customer</Link>
+        </div>
+        <div className="customer-list">
+          <CustomerList customers = {this.state.customers}/>
+        </div>
       </div>
     )
   }
