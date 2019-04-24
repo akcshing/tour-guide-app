@@ -1,4 +1,4 @@
-package com.codeclan.TourGuideApp.repositories;
+package com.codeclan.TourGuideApp.repositories.bookings;
 
 import com.codeclan.TourGuideApp.models.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
