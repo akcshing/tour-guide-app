@@ -32,4 +32,9 @@ public class TourGuideAppApplicationTests {
 
 	}
 
+	@Test
+	public void canGetBookingByDay(){
+		List<Booking> bookings = 
+	}
+
 }
