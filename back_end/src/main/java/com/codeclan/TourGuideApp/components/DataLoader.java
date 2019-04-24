@@ -109,6 +109,36 @@ public class DataLoader implements ApplicationRunner {
         Booking booking4 = new Booking(TimeOfDayType.MORNING, authursSeat, kyleSr, DayType.MONDAY);
         bookingRepository.save(booking4);
 
+        Booking booking5 = new Booking(TimeOfDayType.AFTERNOON, dynamicEarth, kyleJr, DayType.TUEDSDAY);
+        bookingRepository.save(booking5);
+
+        Booking booking6 = new Booking(TimeOfDayType.AFTERNOON, dynamicEarth, kyleSr, DayType.TUEDSDAY);
+        bookingRepository.save(booking6);
+
+        Booking booking7 = new Booking(TimeOfDayType.AFTERNOON, dynamicEarth, shelly, DayType.TUEDSDAY);
+        bookingRepository.save(booking7);
+
+        Booking booking8 = new Booking(TimeOfDayType.EVENING, maryKing, sarah, DayType.SATURDAY);
+        bookingRepository.save(booking8);
+
+        Booking booking9 = new Booking(TimeOfDayType.EVENING, maryKing, john, DayType.SATURDAY);
+        bookingRepository.save(booking9);
+
+        Booking booking10 = new Booking(TimeOfDayType.EVENING, maryKing, harry, DayType.SATURDAY);
+        bookingRepository.save(booking10);
+
+        Booking booking11 = new Booking(TimeOfDayType.AFTERNOON, castle,layla, DayType.THURSDAY);
+        bookingRepository.save(booking11);
+
+        Booking booking12 = new Booking(TimeOfDayType.AFTERNOON, castle, harry, DayType.THURSDAY);
+        bookingRepository.save(booking12);
+
+        Booking booking13 = new Booking(TimeOfDayType.MORNING, childhood, layla, DayType.WEDNESDAY);
+        bookingRepository.save(booking13);
+
+        Booking booking14 = new Booking(TimeOfDayType.MORNING, national_Museum_of_Scotland, john, DayType.WEDNESDAY);
+        bookingRepository.save(booking14);
+
     }
 
 
