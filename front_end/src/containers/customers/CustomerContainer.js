@@ -29,6 +29,10 @@ class CustomerContainer extends Component {
     })
   }
 
+  handleEdit(id){
+    window.location = "/customers/edit/" + id
+  }
+
 
 
   render(){
@@ -37,7 +41,11 @@ class CustomerContainer extends Component {
       <div className = "customer">
       <h1>Customer</h1>
       <Customer customer = {this.state.customer} />
-      <CustomerDetails customer = {this.state.customer} handleDelete = {this.handleDelete}/>
+      <CustomerDetails
+      customer = {this.state.customer}
+      handleDelete = {this.handleDelete}
+      handleEdit={this.handleEdit}
+      />
       </div>
     )
   }
