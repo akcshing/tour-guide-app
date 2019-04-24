@@ -19,8 +19,8 @@ const Attraction = ({attraction}) => {
       <p id = "category" >Category: {attraction.category}</p>
       <p id = "description" >Desciption: {attraction.description}</p>
       <p id = "fee" >Fee: {attraction.fee}</p>
-      <p id = "accessibility" >Accessibility: {attraction.accessibility}</p>
-      <p id = "opening-time" >Opening Time: {attraction.openingTime}</p>
+      <p id = "accessibility" >Accessibility: {attraction.accessibility.toLowerCase()}</p>
+      <p id = "opening-time" >Opening Time: {attraction.openingTime.toLowerCase()}</p>
       <br></br>
       <br></br>
 

@@ -38,6 +38,8 @@ img {
   width: 400px;
   height: auto;
 }
+
+
 .navbar-header {
   font-weight: bold;
   display: flex;
@@ -126,4 +128,8 @@ img {
   border-radius: 5px;
   flex: 1 0 25%;
   margin: 25px;
+}
+
+#accessibility, #opening-time{
+  text-transform: capitalize;
 }
