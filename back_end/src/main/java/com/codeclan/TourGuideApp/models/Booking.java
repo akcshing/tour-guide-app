@@ -21,8 +21,8 @@ public class Booking {
     @Column
     private TimeOfDayType timeOfDay;
 
-    @JsonIgnoreProperties("booking")
-    @OneToOne
+    @JsonIgnoreProperties("bookings")
+    @ManyToOne
     @JoinColumn(name = "attraction_id")
     private Attraction attraction;
 
