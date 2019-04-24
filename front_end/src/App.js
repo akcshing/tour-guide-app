@@ -18,6 +18,8 @@ import BookingContainer from './containers/bookings/BookingContainer';
 import BookingFormContainer from './containers/bookings/BookingFormContainer';
 import BookingEditFormContainer from './containers/bookings/BookingEditFormContainer';
 
+import HomeContainer from "./containers/home/HomeContainer"
+
 
 import './App.css';
 
@@ -28,6 +30,7 @@ class App extends Component {
       <React.Fragment>
           <NavBar />
           <Switch>
+            <Route exact path = '/' component={HomeContainer}/>
             <Route exact path = '/customers' component={CustomerListContainer}/>
             <Route exact path = '/customers/new' component={CustomerFormContainer}/>
             <Route exact path="/customers/edit/:id" render = {(props) =>{

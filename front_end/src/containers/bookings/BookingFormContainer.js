@@ -19,7 +19,6 @@ class BookingFormContainer extends Component {
     request.get('/attractions').then((data) => {
       this.setState({attractions: data._embedded.attractions})
     }).then(() => {
-
     request.get('/customers').then((data)=>{
       this.setState({customers: data._embedded.customers})
     });
