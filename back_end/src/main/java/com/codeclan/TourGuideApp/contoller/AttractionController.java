@@ -1,5 +1,7 @@
 package com.codeclan.TourGuideApp.contoller;
 
+import com.codeclan.TourGuideApp.enums.AccessibilityType;
+import com.codeclan.TourGuideApp.helpers.EnumsConverter;
 import com.codeclan.TourGuideApp.models.Attraction;
 import com.codeclan.TourGuideApp.repositories.attractions.AttractionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value ="/attractions")
-public class AttractionController {
+public class AttractionController extends EnumsConverter {
 
     @Autowired
     AttractionRepository attractionRepository;
@@ -21,5 +23,12 @@ public class AttractionController {
     public List<Attraction> getAttractionByCategory(@PathVariable String category){
         return attractionRepository.getAttractionByCategory(category);
     }
+
+    @GetMapping (value = "/sort_by_accessibility/{accessibility}")
+    public List<Attraction> getAttractionByAccessibility(@PathVariable String accessibility){
+        AccessibilityType accessibilityAsEnum = setAccessibilityToEnum(accessibility);
+        return attractionRepository.getAttractionByAccessibility(accessibilityAsEnum);
+    }
+
 
 }

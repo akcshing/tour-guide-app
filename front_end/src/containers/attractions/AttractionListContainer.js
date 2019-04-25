@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import AttractionList from "../../components/attractions/AttractionList"
 import Request from "../../helpers/request"
 import AttractionFilterButton from "../../components/attractions/AttractionFilterButton"
-import {categoryArr} from "../../helpers/enums"
+import {categoryArr, accessabilityArr} from "../../helpers/enums"
 
 class AttractionListContainer extends Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class AttractionListContainer extends Component {
       filteredAttractions: null
     }
     this.handleFilter = this.handleFilter.bind(this)
+    this.handleAccessFilter = this.handleAccessFilter.bind(this)
   }
 
   componentDidMount(){
@@ -29,9 +30,19 @@ class AttractionListContainer extends Component {
     })
   }
 
+  handleAccessFilter(filterCriteria){
+    let request = new Request()
+    request.get('/attractions/sort_by_accessibility/' + filterCriteria).then((data) => {
+      this.setState({attractions: data})
+    })
+  }
+
   render(){
-    const filterOptions = categoryArr.map((option, index) => {
+    const categoryFilterOptions = categoryArr.map((option, index) => {
       return <AttractionFilterButton key = {index} filterOption = {option} handleFilter={this.handleFilter} />
+    })
+    const accessFilterOptions = accessabilityArr.map((option, index) => {
+      return <AttractionFilterButton key = {index} filterOption = {option} handleFilter={this.handleAccessFilter} />
     })
 
     return(
@@ -43,7 +54,10 @@ class AttractionListContainer extends Component {
         </div>
         <div className="attraction-filters">
           <label>Filter by Category: </label>
-          {filterOptions}
+          {categoryFilterOptions}
+          <br></br>
+          <label>Filter by accessibility</label>
+          {accessFilterOptions}
           <hr></hr>
         </div>
         <div className="attraction-list">

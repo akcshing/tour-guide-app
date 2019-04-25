@@ -1,4 +1,5 @@
 package com.codeclan.TourGuideApp.helpers;
+import com.codeclan.TourGuideApp.enums.AccessibilityType;
 import com.codeclan.TourGuideApp.enums.DayType;
 import com.codeclan.TourGuideApp.enums.TimeOfDayType;
 
@@ -55,6 +56,33 @@ public abstract class EnumsConverter {
                 break;
         }
         return newDay;
+
+    }
+
+    public AccessibilityType setAccessibilityToEnum(String accessibility){
+        AccessibilityType newAccessibility = null;
+        switch (accessibility.toLowerCase()){
+            case "wheelchairaccess":
+                newAccessibility = AccessibilityType.WHEELCHAIRACCESS;
+                break;
+
+            case "dietaryrequirements":
+                newAccessibility = AccessibilityType.DIETARYREQUIREMENTS;
+                break;
+
+            case "hearinginductionloop":
+                newAccessibility = AccessibilityType.HEARINGINDUCTIONLOOP;
+                break;
+
+            case "dogfriendly":
+                newAccessibility = AccessibilityType.DOGFRIENDLY;
+                break;
+
+            case "childfriendly":
+                newAccessibility = AccessibilityType.CHILDFRIENDLY;
+                break;
+        }
+        return newAccessibility;
 
     }
 }
